@@ -1,0 +1,2 @@
+class UseraddrsController < ApplicationController
+end

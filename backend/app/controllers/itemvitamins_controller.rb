@@ -1,0 +1,2 @@
+class ItemvitaminsController < ApplicationController
+end
