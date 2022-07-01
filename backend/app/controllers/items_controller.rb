@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
     end
 
     def create
-        item = Item.create(allowed)
+        item = Item.create!(allowed)
         render json: item, status: :created
     end
 

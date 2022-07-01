@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(allowed)
+        user = User.create!(allowed)
         render json: user, status: :created
     end
 
