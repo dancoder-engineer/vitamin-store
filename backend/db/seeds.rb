@@ -365,6 +365,40 @@ Creditcard.create({
 	address_id: 3
 })
 
+Review.create({
+	reviewtext: "Like humans, my body doesn't create vitamin c. My daddy gives me these pills ground up in my Timmy, and they make me feel big and strong!",
+	stars: 5,
+	user_id: 1,
+	item_id: 5
+})
+
+Review.create({
+	reviewtext: "I like the way this tastes, but so does my super fat husband, who works at home and drinks the whole box in the time it takes me to drink one pack.",
+	stars: 5,
+	user_id: 2,
+	item_id: 4
+})
+
+Review.create({
+	reviewtext: "I take two of these every day to reduce my stress. They work great!!",
+	stars: 5,
+	user_id: 2,
+	item_id: 15
+})
+
+Review.create({
+	reviewtext: "My daughter keeps giving me these in an attempt to kill me as part of some Game of Thrones-esque backstab fest over inheritence or something. Should've stayed with Janis.",
+	stars: 1,
+	user_id: 3,
+	item_id: 17
+})
+
+Review.create({
+	reviewtext: "My daughter feeds me these. I think that 666 in the mg is some kind of coded messge about how she really feels about me.",
+	stars: 1,
+	user_id: 3,
+	item_id: 12
+})
 
 Itemvitamin.create({
     item_id: 1,
