@@ -4,14 +4,14 @@ Rails.application.routes.draw do
  # resources :itemvitamins
  # resources :usercreditcards
  # resources :useraddrs
- # resources :addresses
  # resources :creditcards
  # resources :carts
-  resources :vitamins, only: [:index, :show]
-  resources :items, only: [:index, :show]
+  resources :addresses, only: [:index]
+  resources :vitamins
+  resources :items
  # resources :reviews
  # resources :orders
- # resources :users
+  resources :users, except: [:destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

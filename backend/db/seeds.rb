@@ -274,6 +274,46 @@ Item.create ({
 
 
 
+User.create({
+	firstname: "Huihui",
+	lastname: "Zhu",
+    username: "TheBunnyWhoSqueaks",
+    password: "XiaoHui",
+    kind:"Customer"
+})
+
+
+
+
+
+
+
+
+
+
+Address.create({
+	street1: "53 Richmond Blvd.",
+    street2: "Unit 1b",
+    town: "Ronkonkoma",
+    state: "NY",
+    zipcode: "11779"
+})
+
+Address.create({
+    street1: "107 Sea Cove Rd.",
+    street2: "",
+    town: "Northport",
+    state: "NY",
+    zipcode: "11768"
+})
+
+Address.create({
+    street1: "1110 Scott Dr.",
+    street2: "",
+    town: "N Valley Stream",
+    state: "NY",
+    zipcode: "11580"
+})
 
 
 
