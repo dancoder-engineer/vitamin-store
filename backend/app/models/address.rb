@@ -1,7 +1,7 @@
 class Address < ApplicationRecord
 
-    belongs_to :order
+  #  belongs_to :order
     belongs_to :user
-    belongs_to :creditcard
+    has_many :creditcards
 
 end

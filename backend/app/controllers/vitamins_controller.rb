@@ -12,7 +12,7 @@ class VitaminsController < ApplicationController
     end
 
     def create
-        vitamin = Vitamin.create(allowed)
+        vitamin = Vitamin.create!(allowed)
         render json: vitamin, status: :created
     end
 
