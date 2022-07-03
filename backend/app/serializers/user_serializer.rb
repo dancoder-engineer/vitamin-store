@@ -3,5 +3,4 @@ class UserSerializer < ActiveModel::Serializer
   has_many :creditcards
   has_many :addresses
   has_many :reviews
-
 end
