@@ -7,7 +7,8 @@ class ItemSerializer < ActiveModel::Serializer
 :price, 
 :pilltype, 
 :blurb, 
-:picurl
+:picurl,
+:featured
 
 
 has_many :reviews
