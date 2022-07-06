@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get '/reviewsbyuser/:id', to: 'reviews#byuser'
+  get '/featureditems', to: 'items#featured'
 
   # Defines the root path route ("/")
   # root "articles#index"

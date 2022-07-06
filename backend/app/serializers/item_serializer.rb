@@ -10,7 +10,7 @@ class ItemSerializer < ActiveModel::Serializer
 :picurl
 
 
-#has_many :itemvitamins
+has_many :reviews
 has_many :vitamins, through: :itemvitamins
 
 end

@@ -5,6 +5,11 @@ class ItemsController < ApplicationController
         render json: items, status: 200
     end
 
+    def featured
+        items = Item.where(featured: true)
+        render json: items, status: 200
+    end
+
     def show
         item = Item.find_by(id: params[:id])
         render json: item, status: 200

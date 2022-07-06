@@ -9,6 +9,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.string :pilltype
       t.text :blurb
       t.string :picurl
+      t.boolean :featured
       t.timestamps
     end
   end

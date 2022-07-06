@@ -82,7 +82,8 @@ Item.create ({
 	price:5.99,
 	pilltype:"Softgel",
 	blurb:"This 'a' is 'a' new start for your body. Take it every day and you'll be feeling like a million bucks. Your bank account will still be feeling as broke as ever, mind you, but YOU'LL feel like a million bucks, which is something.",
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: true
 })
 
 Item.create ({
@@ -93,7 +94,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"Do you want vitamin B? Do you hate the numbers 1, 2, 3 and 6, but love their least common multiple? Then this B12 is for you!",
 	price:5.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: true
 })
 
 Item.create ({
@@ -104,7 +106,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"Not the 'b's! Not the 'bbbbbbbbbbbbbbbbb's! Ohhhh noooo! The tablets are in my eyes!",
 	price:5.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: true
 })
 
 Item.create ({
@@ -115,7 +118,8 @@ Item.create ({
 	pilltype:"Powder",
 	blurb:"This contains as much vitamin C as 10 oranges. You COULD eat 10 oranges instead, but that's about 1,000 calories.If you like some variety in your diet, might I suggest just drinking the Emergen-C and having maybe AN orange, or maybe two, so you can have some meat and other kinds of food, as well?",
 	price:6.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -126,7 +130,8 @@ Item.create ({
 	pilltype:"Gummy",
 	blurb:"You like vitamins? You like candy? Then this is your bag, baby! Bet'cha can't eat just one, but you'll have to use all your willpower to keep from eating the whole bottle at once, or you'll be sleeping on the toilet tonight!",
 	price:7.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: true
 })
 
 Item.create ({
@@ -137,7 +142,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"This one has three kinds of vitamins, because more is better!",
 	price:8.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -148,7 +154,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"This will calm you down and make your bones stronger. If you like to fight, definitely get this, because strong bones make your fist stronger, and being calm makes it so your enemy can never throw you off your game.",
 	price:9.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -159,7 +166,8 @@ Item.create ({
 	pilltype:"Cups",
 	blurb:"You want a calcium suppliment? Drink more milk!",
 	price:10.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -170,7 +178,8 @@ Item.create ({
 	pilltype:"Tablets",
 	blurb:"Want calcium? Lactose intolerant? Enjoy!",
 	price:11.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -181,7 +190,8 @@ Item.create ({
 	pilltype:"Tablets",
 	blurb:"Did you buy calcium? Better buy this too, or you won't be able to absorb it and your purchase will be in vain. Actually, we don't care if you give us money and don't get anything for it, but we do care if you buy two things instead of one, because that's two times the MONEY! Double our cashflow! Double our overly-e	pensive fun! Double our MOOLAH!!!!!",
 	price:12.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -192,7 +202,8 @@ Item.create ({
 	pilltype:"Softgel",
 	blurb:"Don't you just hate it when the insides of your cells come out and all start forming a big mess and you melt because you no longer have proper cells to keep you in the shape of a human? It used to happen to me all the time, until I got vitamin e to strengthen my cell walls, and the ladies love me now that I look like a human and not an amorphous blob.",
 	price:13.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -203,7 +214,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"All 2020, your pastor told you constantly that the covid vaccine was the mark of the beast. Well, he was wrong. The vaccine isn't the mark of the beast, this folate is! The 666 mg it contains will power you up to be the best soldier of satan you can be.",
 	price:14.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -214,7 +226,8 @@ Item.create ({
 	pilltype:"Capsule",
 	blurb:"This folate is not the evil variety. You should probably buy this instead.",
 	price:15.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -225,7 +238,8 @@ Item.create ({
 	pilltype:"Softgel",
 	blurb:"If anyone tried to 'k'ill you, you'll wish you took more vitamin k, so your blood will 'k'lot better, and make those gumshot wounds a whole lot less fatal.",
 	price:16.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -236,7 +250,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"Are you an uptight square? Would you rather be more mellow? Then take some CBD! Although, magnesium ain't half bad for your stress and an	iety, either.",
 	price:17.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -247,7 +262,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"Here's the pill for all you banana haters! Buy a bottle and enjoy your banana-free e	istence. Does that make you weird? Sure, but that just leaves more bananas for the rest of us!",
 	price:18.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -258,7 +274,8 @@ Item.create ({
 	pilltype:"Tablet",
 	blurb:"Sodium chloride contains tons of sodium and lots of cholrine! Take a few of these, and you'll be retining as much water as a swimming pool, and the water you're retaining will be just as cholrinated as swimming pool water, only with less urine.",
 	price:19.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 Item.create ({
@@ -269,7 +286,8 @@ Item.create ({
 	pilltype:"Bag",
 	blurb:"Why pay e	tra for high falootin medical grade sodium when you can just oversalt the hell out of your food and get all the same benefits. This bag contains enough salt that you can cook one meal with enough salt that Gordon Ramsay will make fun of you for the rest of your life, then after you die, he'll find you on the other side and consinue micking you for all eternity.",
 	price:20.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg"
+	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	featured: false
 })
 
 
