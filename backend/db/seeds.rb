@@ -75,218 +75,218 @@ Vitamin.create ({
 
 
 Item.create ({
-	name:"a",
+	name:"Spring Valley Vitamin A",
 	brand:"Spring Valley",
 	dose:"2400mg",
 	pillamount:250,
 	price:5.99,
-	pilltype:"Softgel",
+	pilltype:"Softgels",
 	blurb:"This 'a' is 'a' new start for your body. Take it every day and you'll be feeling like a million bucks. Your bank account will still be feeling as broke as ever, mind you, but YOU'LL feel like a million bucks, which is something.",
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://i.imgur.com/yWdDESq.jpg",
 	featured: true
 })
 
 Item.create ({
-	name:"b12",
+	name:"Nature Made B12",
 	brand:"Nature Made",
 	dose:"1000 mcg",
 	pillamount:75,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"Do you want vitamin B? Do you hate the numbers 1, 2, 3 and 6, but love their least common multiple? Then this B12 is for you!",
 	price:5.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/XMYEPFw.jpg",
 	featured: true
 })
 
 Item.create ({
-	name:"bcomple	",
+	name:"Nature Made B Complex",
 	brand:"Nature Made",
 	dose:"1000 mcg",
 	pillamount:60,
-	pilltype:"Tablet",
-	blurb:"Not the 'b's! Not the 'bbbbbbbbbbbbbbbbb's! Ohhhh noooo! The tablets are in my eyes!",
+	pilltype:"Tablets",
+	blurb:"Not the 'b's! Not the 'bbbbbbbbbbbbbbbbb's! Ohhhh noooo! The Tablets are in my eyes!",
 	price:5.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/9LEhCPj.jpg",
 	featured: true
 })
 
 Item.create ({
-	name:"c emergenc",
+	name:"Emergen-C Orange Flavor",
 	brand:"Emergen-C",
 	dose:"1000 mg",
 	pillamount:30,
-	pilltype:"Powder",
+	pilltype:"Packets of Powder",
 	blurb:"This contains as much vitamin C as 10 oranges. You COULD eat 10 oranges instead, but that's about 1,000 calories.If you like some variety in your diet, might I suggest just drinking the Emergen-C and having maybe AN orange, or maybe two, so you can have some meat and other kinds of food, as well?",
 	price:6.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/Y3ZgQnl.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"c",
+	name:"Nature Made Vitamin C",
 	brand:"Nature Made",
 	dose:"250 mg",
 	pillamount:150,
-	pilltype:"Gummy",
+	pilltype:"Gummies",
 	blurb:"You like vitamins? You like candy? Then this is your bag, baby! Bet'cha can't eat just one, but you'll have to use all your willpower to keep from eating the whole bottle at once, or you'll be sleeping on the toilet tonight!",
 	price:7.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/ZseNjkT.jpg",
 	featured: true
 })
 
 Item.create ({
-	name:"calcium magnesium d",
+	name:"Solgar Calcium Magnesium D",
 	brand:"Solgar",
 	dose:"? Mg",
 	pillamount:300,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"This one has three kinds of vitamins, because more is better!",
 	price:8.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/zpAHSgY.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"calcium magnesium",
+	name:"Country Life Calcium Magnesium",
 	brand:"Country Life",
 	dose:"100mg/500mg",
 	pillamount:180,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"This will calm you down and make your bones stronger. If you like to fight, definitely get this, because strong bones make your fist stronger, and being calm makes it so your enemy can never throw you off your game.",
 	price:9.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/mCjwwGR.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"calcium milk",
+	name:"Clover Organic Farms Milk",
 	brand:"Clover Organic Farms",
 	dose:"1 Cup",
 	pillamount:12,
 	pilltype:"Cups",
 	blurb:"You want a calcium suppliment? Drink more milk!",
 	price:10.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/zmsmTbI.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"calcium",
+	name:"Nature's Bounty Calcium",
 	brand:"Nature's Bounty",
 	dose:"500 mg",
 	pillamount:300,
 	pilltype:"Tablets",
 	blurb:"Want calcium? Lactose intolerant? Enjoy!",
 	price:11.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/tQsHGZV.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"d",
+	name:"Vitamin Code Vitamin D",
 	brand:"Vitamin Code",
 	dose:"125 mcg",
 	pillamount:50,
 	pilltype:"Tablets",
 	blurb:"Did you buy calcium? Better buy this too, or you won't be able to absorb it and your purchase will be in vain. Actually, we don't care if you give us money and don't get anything for it, but we do care if you buy two things instead of one, because that's two times the MONEY! Double our cashflow! Double our overly-e	pensive fun! Double our MOOLAH!!!!!",
 	price:12.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/iORDlik.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"e",
+	name:"Webber Naturals Vitamin E",
 	brand:"Webber Naturals",
 	dose:"400 iu",
 	pillamount:300,
-	pilltype:"Softgel",
+	pilltype:"Softgels",
 	blurb:"Don't you just hate it when the insides of your cells come out and all start forming a big mess and you melt because you no longer have proper cells to keep you in the shape of a human? It used to happen to me all the time, until I got vitamin e to strengthen my cell walls, and the ladies love me now that I look like a human and not an amorphous blob.",
 	price:13.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/VeDN7n8.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"evil folate",
+	name:"Spring Valley Folate",
 	brand:"Spring Valley",
 	dose:"666mg",
 	pillamount:250,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"All 2020, your pastor told you constantly that the covid vaccine was the mark of the beast. Well, he was wrong. The vaccine isn't the mark of the beast, this folate is! The 666 mg it contains will power you up to be the best soldier of satan you can be.",
 	price:14.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/RFEG6XQ.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"folate",
+	name:"Swanson Folate",
 	brand:"Swanson",
 	dose:"800 mcg",
 	pillamount:30,
 	pilltype:"Capsule",
 	blurb:"This folate is not the evil variety. You should probably buy this instead.",
 	price:15.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/jwJHlnj.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"k",
+	name:"Nature Made Vitamin K",
 	brand:"Nature Made",
 	dose:"100 mcg",
 	pillamount:30,
-	pilltype:"Softgel",
+	pilltype:"Softgels",
 	blurb:"If anyone tried to 'k'ill you, you'll wish you took more vitamin k, so your blood will 'k'lot better, and make those gumshot wounds a whole lot less fatal.",
 	price:16.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/sTqCWL0.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"Magnesium",
+	name:"Nature Made Magnesium",
 	brand:"Nature Made",
 	dose:"250 mg",
 	pillamount:100,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"Are you an uptight square? Would you rather be more mellow? Then take some CBD! Although, magnesium ain't half bad for your stress and an	iety, either.",
 	price:17.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/xDhqyCG.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"potassium",
+	name:"Nature Made Potassium",
 	brand:"Nature Made",
 	dose:"? mg",
 	pillamount:100,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"Here's the pill for all you banana haters! Buy a bottle and enjoy your banana-free e	istence. Does that make you weird? Sure, but that just leaves more bananas for the rest of us!",
 	price:18.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/ZpJS0G7.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"sodium",
+	name:"CMC Research Division Sodium",
 	brand:"CMC Research Division",
 	dose:"1 gr",
 	pillamount:100,
-	pilltype:"Tablet",
+	pilltype:"Tablets",
 	blurb:"Sodium chloride contains tons of sodium and lots of cholrine! Take a few of these, and you'll be retining as much water as a swimming pool, and the water you're retaining will be just as cholrinated as swimming pool water, only with less urine.",
 	price:19.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/LBvg13M.jpg",
 	featured: false
 })
 
 Item.create ({
-	name:"bag of salt",
+	name:"Mortin Salt",
 	brand:"Mortin",
 	dose:"50lb",
 	pillamount:1,
 	pilltype:"Bag",
-	blurb:"Why pay e	tra for high falootin medical grade sodium when you can just oversalt the hell out of your food and get all the same benefits. This bag contains enough salt that you can cook one meal with enough salt that Gordon Ramsay will make fun of you for the rest of your life, then after you die, he'll find you on the other side and consinue micking you for all eternity.",
+	blurb:"Why pay extra for high falootin medical grade sodium when you can just oversalt the hell out of your food and get all the same benefits. This bag contains enough salt that you can cook one meal with enough salt that Gordon Ramsay will make fun of you for the rest of your life, then after you die, he'll find you on the other side and consinue micking you for all eternity.",
 	price:20.99,
-	picurl:"https://i.imgur.com/gg15Wzi.jpg",
+	picurl:"https://imgur.com/ulRy1T5.jpg",
 	featured: false
 })
 

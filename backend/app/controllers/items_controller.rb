@@ -40,6 +40,12 @@ class ItemsController < ApplicationController
         end        
     end
 
+    def searchitems
+        items = Item.all
+        filteredItems = items.select{ |v| v.name.downcase.include?(params[:term].downcase)}
+        render json: filteredItems, status: 200
+    end
+
     private
 
     def allowed

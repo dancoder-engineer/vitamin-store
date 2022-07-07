@@ -1,0 +1,23 @@
+.card{
+    height:auto;
+    width:100px;
+    border:solid;
+    border-style: groove;
+    display:inline-block;
+    padding: 10px
+}
+
+.cardPic{
+    height:75px;
+    display: block;
+    margin: auto
+}
+
+.cardText{
+    text-align:center;
+    font-size:small
+}
+
+.header{
+    border: solid
+}
