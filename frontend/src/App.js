@@ -33,10 +33,11 @@ fetch("http://127.0.0.1:5000/featureditems")
 
 
   return (
-    <div>
-      <Header searchFunc={searchFunc} />
-      <div class="cardsHolder">{items && items}</div>
-    </div>
+    <div class="mainStore">
+      <div class="things">
+        <Header searchFunc={searchFunc} />
+        <div class="cardsHolder">{items && items}</div>
+    </div></div>
 
   );
 }

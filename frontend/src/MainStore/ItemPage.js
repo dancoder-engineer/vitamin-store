@@ -78,7 +78,7 @@ function makeStars(amount) {
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                <input type="text" id="productQuantity" class="quantity" value="1" />
+                Quantity: <input type="text" id="productQuantity" class="quantity" value="1" />
                 <button>Add to Cart</button>
             </div>
 
@@ -91,7 +91,7 @@ function makeStars(amount) {
                     Title: <input type="text" id="title" value="1" />
                     Stars: <input type="text" id="numberOfStars" class="quantity" value="1" />
                 </div>
-                <input type="text" id="reviewText" value="1" />
+                <textarea id="reviewText"  />
                 <button id="postReview" class="centeredItem">Post Review</button>
             </div>
             <br /><br /><br />

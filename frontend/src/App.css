@@ -8,3 +8,14 @@
 .cardDiv{
   padding:10px
 }
+
+.mainStore{
+  display:grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 20px 1fr;
+}
+
+.things{
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
