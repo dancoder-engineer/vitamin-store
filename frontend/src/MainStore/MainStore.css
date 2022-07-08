@@ -1,6 +1,6 @@
 .card{
     height:auto;
-    width:100px;
+    width:125px;
     border:solid;
     border-style: groove;
     display:inline-block;
@@ -9,6 +9,7 @@
 
 .cardPic{
     height:150px;
+    max-width: 100px;
     display: block;
     margin: auto
 }
@@ -46,8 +47,10 @@
     grid-template-rows: 2;
     padding: 20px
 }
+
 .itemPicture{
     height:400px;
+    max-width:250px;
     display: block;
     margin: auto;
 }
@@ -57,7 +60,7 @@
     grid-template-rows: 2;
 }
 
-#quantity{
+.quantity{
     width: 10px;
 }
 
@@ -74,4 +77,23 @@
 .smallText{
     text-align:center;
     font-size: small;
+}
+
+.makeReviewHolder{
+    grid-template-columns: 1;
+    grid-column-end: span 2;
+    grid-row-start: 4;
+}
+
+#reviewText{
+    width:275px;
+    height:200px;
+    display: block;
+    margin: auto;
+}
+
+.centeredItem{
+    display: block;
+    margin: auto;
+    text-align:center;
 }

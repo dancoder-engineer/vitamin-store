@@ -18,20 +18,43 @@ fetch(fullurl)
     //console.log(data)
     setItemData(data)
 
-    setReviews(data.reviews.map((i) => 
-        (
+    setReviews(data.reviews.map((i) => {
+        return (
         <div key={i.id}>
-            <h3 class="centerText">{i.title}</h3>
+            <h3 class="centerText">{i.title} {makeStars(i.stars)}</h3>
             <p class="centerText">{i.reviewtext}</p>
-            <p class="smallText">written by {i.username}</p><br /><br /><br />
+            <p class="smallText">written by {i.username} on {parseDate(i.created_at)}</p><br /><br /><br />
         </div>
 
-    )
+    )}
         ))
 
 }
     ) 
 }, [])
+
+
+function parseDate(dat) {
+    //           0123456789012345678
+    //created_at 2022-07-08T19:53:34.746Z
+
+    let year = dat.slice(0,4)
+    let month = dat.slice(5,7)
+    let day = dat.slice(8,10)
+    return day+"/"+month+"/"+year
+}
+
+function makeStars(amount) {
+    let stars=""
+
+    for (let n = 0; n < amount; n++) {
+        stars += "★"
+    }
+
+    while(stars.length < 5) {stars += "☆"}
+
+    return stars
+}
 
 
  return (
@@ -55,13 +78,23 @@ fetch(fullurl)
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                <input type="text" id="quantity" value="1" />
+                <input type="text" id="productQuantity" class="quantity" value="1" />
                 <button>Add to Cart</button>
             </div>
 
             <div class="reviewsHolder">
                 {reviews && reviews}
             </div>
+
+            <div class="makeReviewHolder">
+                <div class="centeredItem">
+                    Title: <input type="text" id="title" value="1" />
+                    Stars: <input type="text" id="numberOfStars" class="quantity" value="1" />
+                </div>
+                <input type="text" id="reviewText" value="1" />
+                <button id="postReview" class="centeredItem">Post Review</button>
+            </div>
+            <br /><br /><br />
 
         </div>
     )

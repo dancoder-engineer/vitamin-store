@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_28_183113) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
+    t.string "productname"
     t.string "brand"
     t.string "dose"
     t.integer "pillamount"

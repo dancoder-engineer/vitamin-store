@@ -76,6 +76,7 @@ Vitamin.create ({
 
 Item.create ({
 	name:"Spring Valley Vitamin A",
+	productname:"Vitamin A",
 	brand:"Spring Valley",
 	dose:"2400mg",
 	pillamount:250,
@@ -87,7 +88,8 @@ Item.create ({
 })
 
 Item.create ({
-	name:"Nature Made B12",
+	name:"Nature Made Vitamin B12",
+	productname:"Vitamin B12",
 	brand:"Nature Made",
 	dose:"1000 mcg",
 	pillamount:75,
@@ -100,6 +102,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature Made B Complex",
+	productname:"B Complex",
 	brand:"Nature Made",
 	dose:"1000 mcg",
 	pillamount:60,
@@ -112,6 +115,7 @@ Item.create ({
 
 Item.create ({
 	name:"Emergen-C Orange Flavor",
+	productname:"Orange Flavor",
 	brand:"Emergen-C",
 	dose:"1000 mg",
 	pillamount:30,
@@ -124,6 +128,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature Made Vitamin C",
+	productname:"Vitamin C",
 	brand:"Nature Made",
 	dose:"250 mg",
 	pillamount:150,
@@ -136,6 +141,7 @@ Item.create ({
 
 Item.create ({
 	name:"Solgar Calcium Magnesium D",
+	productname:"Calcium Magnesium D",
 	brand:"Solgar",
 	dose:"? Mg",
 	pillamount:300,
@@ -148,6 +154,7 @@ Item.create ({
 
 Item.create ({
 	name:"Country Life Calcium Magnesium",
+	productname:"Calcium Magenesium",
 	brand:"Country Life",
 	dose:"100mg/500mg",
 	pillamount:180,
@@ -160,6 +167,7 @@ Item.create ({
 
 Item.create ({
 	name:"Clover Organic Farms Milk",
+	productname:"Milk",
 	brand:"Clover Organic Farms",
 	dose:"1 Cup",
 	pillamount:12,
@@ -172,6 +180,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature's Bounty Calcium",
+	productname:"Calcium",
 	brand:"Nature's Bounty",
 	dose:"500 mg",
 	pillamount:300,
@@ -184,6 +193,7 @@ Item.create ({
 
 Item.create ({
 	name:"Vitamin Code Vitamin D",
+	productname:"Vitamin D",
 	brand:"Vitamin Code",
 	dose:"125 mcg",
 	pillamount:50,
@@ -196,6 +206,7 @@ Item.create ({
 
 Item.create ({
 	name:"Webber Naturals Vitamin E",
+	productname:"Vitamin E",
 	brand:"Webber Naturals",
 	dose:"400 iu",
 	pillamount:300,
@@ -208,6 +219,7 @@ Item.create ({
 
 Item.create ({
 	name:"Spring Valley Folate",
+	productname:"Folate",
 	brand:"Spring Valley",
 	dose:"666mg",
 	pillamount:250,
@@ -220,6 +232,7 @@ Item.create ({
 
 Item.create ({
 	name:"Swanson Folate",
+	productname:"Folate",
 	brand:"Swanson",
 	dose:"800 mcg",
 	pillamount:30,
@@ -232,6 +245,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature Made Vitamin K",
+	productname:"Vitamin K",
 	brand:"Nature Made",
 	dose:"100 mcg",
 	pillamount:30,
@@ -244,6 +258,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature Made Magnesium",
+	productname:"Magnesium",
 	brand:"Nature Made",
 	dose:"250 mg",
 	pillamount:100,
@@ -256,6 +271,7 @@ Item.create ({
 
 Item.create ({
 	name:"Nature Made Potassium",
+	productname:"Potassium",
 	brand:"Nature Made",
 	dose:"? mg",
 	pillamount:100,
@@ -268,6 +284,7 @@ Item.create ({
 
 Item.create ({
 	name:"CMC Research Division Sodium",
+	productname:"Sodium",
 	brand:"CMC Research Division",
 	dose:"1 gr",
 	pillamount:100,
@@ -280,6 +297,7 @@ Item.create ({
 
 Item.create ({
 	name:"Mortin Salt",
+	productname:"Salt",
 	brand:"Mortin",
 	dose:"50lb",
 	pillamount:1,
@@ -396,7 +414,7 @@ Review.create({
 	username: "HatefulNotShy",
 	title: "Can't Stop My Husband from Eating Them!",
 	reviewtext: "I like the way this tastes, but so does my super fat husband, who works at home and drinks the whole box in the time it takes me to drink one pack.",
-	stars: 5,
+	stars: 3,
 	user_id: 2,
 	item_id: 4
 })
