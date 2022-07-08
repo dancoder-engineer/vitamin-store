@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
         else
             render json: {errors: ["Review not found."]}
         end
+    end
 
         def destroy
             review = Review.find_by(id: params[:id])

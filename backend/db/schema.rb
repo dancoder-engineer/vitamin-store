@@ -90,6 +90,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_28_183113) do
   end
 
   create_table "reviews", force: :cascade do |t|
+    t.text "username"
+    t.text "title"
     t.text "reviewtext"
     t.integer "stars"
     t.integer "item_id"

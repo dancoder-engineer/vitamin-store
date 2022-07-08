@@ -8,7 +8,7 @@
 }
 
 .cardPic{
-    height:75px;
+    height:150px;
     display: block;
     margin: auto
 }
@@ -20,4 +20,58 @@
 
 .header{
     border: solid
+}
+
+
+
+
+
+.itemStoreMain{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 500px;
+    margin: auto
+}
+
+.itemName{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+.pictureHolder{
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    padding: 20px
+}
+.itemPicture{
+    height:400px;
+    display: block;
+    margin: auto;
+}
+
+.dataHolder{
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+}
+
+#quantity{
+    width: 10px;
+}
+
+.reviewsHolder{
+    grid-template-columns: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.smallText{
+    text-align:center;
+    font-size: small;
 }

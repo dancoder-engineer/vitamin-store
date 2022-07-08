@@ -14,6 +14,15 @@ class UsersController < ApplicationController
         end
     end
 
+    def nameonly
+        user = User.find_by(id: params[:id])
+        if user
+            render json: {username: user.username}, status: 200
+        else
+            render json: {errors: ["User not found."]}, status: 404
+        end
+    end
+
     def create
         user = User.create!(allowed)
         render json: user, status: :created

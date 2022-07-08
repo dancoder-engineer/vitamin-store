@@ -384,6 +384,8 @@ Creditcard.create({
 })
 
 Review.create({
+	username: "TheBunnyWhoSqueaks",
+	title: "Guinea Pigs Love It!",
 	reviewtext: "Like humans, my body doesn't create vitamin c. My daddy gives me these pills ground up in my Timmy, and they make me feel big and strong!",
 	stars: 5,
 	user_id: 1,
@@ -391,6 +393,8 @@ Review.create({
 })
 
 Review.create({
+	username: "HatefulNotShy",
+	title: "Can't Stop My Husband from Eating Them!",
 	reviewtext: "I like the way this tastes, but so does my super fat husband, who works at home and drinks the whole box in the time it takes me to drink one pack.",
 	stars: 5,
 	user_id: 2,
@@ -398,6 +402,8 @@ Review.create({
 })
 
 Review.create({
+	username: "HatefulNotShy",
+	title: "Stress Reduction",
 	reviewtext: "I take two of these every day to reduce my stress. They work great!!",
 	stars: 5,
 	user_id: 2,
@@ -405,6 +411,8 @@ Review.create({
 })
 
 Review.create({
+	username: "OldAndSpunky",
+	title: "Help Me...",
 	reviewtext: "My daughter keeps giving me these in an attempt to kill me as part of some Game of Thrones-esque backstab fest over inheritence or something. Should've stayed with Janis.",
 	stars: 1,
 	user_id: 3,
@@ -412,6 +420,8 @@ Review.create({
 })
 
 Review.create({
+	username: "OldAndSpunky",
+	title: "These Things Scare Me...",
 	reviewtext: "My daughter feeds me these. I think that 666 in the mg is some kind of coded messge about how she really feels about me.",
 	stars: 1,
 	user_id: 3,

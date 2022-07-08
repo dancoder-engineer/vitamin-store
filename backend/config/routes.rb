@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/reviewsbyuser/:id', to: 'reviews#byuser'
   get '/featureditems', to: 'items#featured'
   get '/searchitems/:term', to: 'items#searchitems'
+  get '/username/:id', to: 'users#nameonly'
 
   # Defines the root path route ("/")
   # root "articles#index"
