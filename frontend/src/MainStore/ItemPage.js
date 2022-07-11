@@ -57,6 +57,26 @@ function makeStars(amount) {
 }
 
 
+
+function buttonClick() {
+    let fullurl = url+"login/"
+    fetch(fullurl, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+         // mode: 'no-cors',
+          method: "post",
+          body: JSON.stringify({
+            username: "TheBunnyWhoSqueaks",
+            password:"XiaoHui"
+          })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+
  return (
         <div class="itemStoreMain">
             <div class="itemName">
@@ -92,7 +112,7 @@ function makeStars(amount) {
                     Stars: <input type="text" id="numberOfStars" class="quantity" value="1" />
                 </div>
                 <textarea id="reviewText"  />
-                <button id="postReview" class="centeredItem">Post Review</button>
+                <button onClick={buttonClick} id="postReview" class="centeredItem">Post Review</button>
             </div>
             <br /><br /><br />
 
