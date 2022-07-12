@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import ItemPage from './MainStore/ItemPage.js'
 import App from './App';
+import Test from './Test.js'
 import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
-const url="http://127.0.0.1:5000/"
+const url="http://localhost:5000/"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App url={url} />} />
         <Route path='/item/:id' element={<ItemPage url={url} />} />
+        <Route path='/test/' element={<Test />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

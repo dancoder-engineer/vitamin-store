@@ -65,13 +65,19 @@ function buttonClick() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
-         // mode: 'no-cors',
-          method: "post",
+          method: "POST",
           body: JSON.stringify({
             username: "TheBunnyWhoSqueaks",
             password:"XiaoHui"
           })
     })
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+function button2click(){
+    let fullurl = url+"getme/"
+    fetch(fullurl)
     .then(res => res.json())
     .then(data => console.log(data))
 }
@@ -99,7 +105,7 @@ function buttonClick() {
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
                 Quantity: <input type="text" id="productQuantity" class="quantity" value="1" />
-                <button>Add to Cart</button>
+                <button onClick={button2click}>Add to Cart</button>
             </div>
 
             <div class="reviewsHolder">

@@ -2,6 +2,7 @@ require_relative "boot"
 
 require "rails/all"
 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -18,12 +19,17 @@ module CsmBack
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
+    config.api_only = false
         # Must add these lines!
     # Adding back cookies and session middleware
+
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.insert_after(ActionDispatch::Cookies, ActionDispatch::Session::CookieStore)
 
+    config.session_store :cookie_store, key: '_interslice_session'
+    config.middleware.use config.session_store, config.session_options
+    
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
   end
