@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/featureditems', to: 'items#featured'
   get '/searchitems/:term', to: 'items#searchitems'
   post '/login', to: 'sessions#login'
+  post '/newuser', to: 'sessions#newUser'
   get '/getme', to: 'sessions#getme'
   get '/extra', to: 'sessions#extra'
   # Defines the root path route ("/")

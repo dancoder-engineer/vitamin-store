@@ -59,24 +59,36 @@ function makeStars(amount) {
 
 
 function buttonClick() {
-    let fullurl = url+"login/"
+
+    let loginInfo = {
+        username: "TheBunnyWhoSqueaks",
+        password:"XiaoHui"
+    }
+
+    let createInfo = {
+            firstname: "Dan",
+            lastname: "Seminara",
+            username: "CrawdKenny",
+            password: "HuiHui",
+            password_confirmation: "HuiHui",
+            kind:"Customer"
+    }
+
+    let fullurl = "/newuser/"
     fetch(fullurl, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
           method: "POST",
-          body: JSON.stringify({
-            username: "TheBunnyWhoSqueaks",
-            password:"XiaoHui"
-          })
+          body: JSON.stringify(createInfo)
     })
     .then(res => res.json())
     .then(data => console.log(data))
 }
 
 function button2click(){
-    let fullurl = url+"getme/"
+    let fullurl = "/getme/"
     fetch(fullurl)
     .then(res => res.json())
     .then(data => console.log(data))
