@@ -14,9 +14,7 @@ class SessionsController < ApplicationController
        # session.delete :user_id
     # session[:user_id] ||= 0
         
-
         user=User.find_by(id: session[:user_id])
-       #session[:user_id] = 1
         return render json: user
           
         
@@ -44,17 +42,24 @@ class SessionsController < ApplicationController
 
         if user&.authenticate(params[:password])
             session[:user_id] = user.id
-            render json: user
-        else
-            render json: {errors: "Username or Password Wrong"}
         end
-    end
+            render json: user
+      end
 
+    
+    def logout
+      if session[:user_id]
+        session.delete :user_id
+        render json:{log: "Logged out"}
+      else
+        render json:{log:"Not logged in"}
+      end
+    end
 
     private
 
     def allowed
-        params.permit(:username, :password, :firstname, :lastname, :kind)
+        params.permit(:username, :password, :password_confirmation, :firstname, :lastname, :kind)
     end
 
 end

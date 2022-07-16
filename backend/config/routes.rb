@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post '/newuser', to: 'sessions#newUser'
   get '/getme', to: 'sessions#getme'
   get '/extra', to: 'sessions#extra'
+  get '/logout', to: 'sessions#logout'
   # Defines the root path route ("/")
   # root "articles#index"
 end
