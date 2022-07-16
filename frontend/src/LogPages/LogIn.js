@@ -55,6 +55,7 @@ function LogIn() {
 return(
     
     <div class="mainDiv">
+        <h2>Log In</h2><br />
         User Name:<br /><input type="text" name="username" onChange={handleChange}/><br />
         Password:<br /><input type="text" name="password" onChange={handleChange}/><br />
         <button onClick={handleLogIn}>Log In</button>
