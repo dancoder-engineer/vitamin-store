@@ -3,16 +3,36 @@ import './MainStore.css'
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
-function ItemPage({url}) {
+import Header from './Header.js'
+
+function ItemPage({}) {
 
 let [itemData, setItemData] = useState()
 let [reviews, setReviews] = useState()
 
+let [user, setUser] = useState([])
+
+
+function youGetMe() {
+
+  fetch("/getme/")
+  .then(res => res.json())
+  .then(data => setUser(data))
+}
+
+
+
 const params = useParams()
-let fullurl = url+"items/"+params.id
+
 
 useEffect(() => {
-fetch(fullurl)
+ getReviews()
+ youGetMe()
+}, [])
+
+function getReviews() {
+    let fullurl = "/items/"+params.id
+    fetch(fullurl)
 .then(res => res.json())
 .then(data => {
     //console.log(data)
@@ -30,8 +50,8 @@ fetch(fullurl)
         ))
 
 }
-    ) 
-}, [])
+    )
+}
 
 
 function parseDate(dat) {
@@ -57,13 +77,8 @@ function makeStars(amount) {
 }
 
 
-
 function buttonClick() {
 
-    let loginInfo = {
-        username: "TheBunnyWhoSqueaks",
-        password:"XiaoHui"
-    }
 
     let createInfo = {
             firstname: "Dan",
@@ -96,6 +111,9 @@ function button2click(){
 
 
  return (
+        <div class = "bigDiv">
+        <Header youGetMe={youGetMe} search={0} user={user}/> 
+            
         <div class="itemStoreMain">
             <div class="itemName">
                 <h1>{itemData && itemData.name}</h1>
@@ -134,7 +152,7 @@ function button2click(){
             </div>
             <br /><br /><br />
 
-        </div>
+        </div> </div>
     )
 }
 
