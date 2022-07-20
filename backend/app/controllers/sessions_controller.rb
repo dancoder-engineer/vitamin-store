@@ -1,16 +1,20 @@
 class SessionsController < ApplicationController
 
+  def getCart
+       render json: session[:cart]
+  end
+
   def updateCart
     whichItem=params[:id]
     howMany=params[:amount]
+    session[:cart][whichItem] ||= 0
     session[:cart][whichItem] = howMany
+    session[:cart] = session[:cart].select{ |a, v| v.to_i > 0}
     render json: session
   end
 
   def createCart
-    whichItem = params[:id]
     session[:cart] ||= {}
-    session[:cart][whichItem] ||= 0
     render json: session
   end
 

@@ -22,8 +22,9 @@ Rails.application.routes.draw do
   get '/getme', to: 'sessions#getme'
   get '/extra', to: 'sessions#extra'
   get '/logout', to: 'sessions#logout'
-  post '/createcart/', to: 'sessions#createCart'
+  get '/createcart/', to: 'sessions#createCart'
   post '/updatecart/', to: 'sessions#updateCart'
+  get '/getcart/', to: 'sessions#getCart'
   # Defines the root path route ("/")
   # root "articles#index"
 end

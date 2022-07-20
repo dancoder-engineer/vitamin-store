@@ -24,14 +24,7 @@ function youGetMe() {
 function createCartSlot() {
     let fullurl = "/createcart/"
     let dat = {id : params.id}
-    fetch(fullurl, {
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        method: "POST",
-        body: JSON.stringify(dat)
-    })
+    fetch(fullurl)
     .then(res => res.json())
 //    .then(data => console.log(data))
 }
@@ -109,12 +102,16 @@ function makeStars(amount) {
 }
 
 function changeAmt(e){
+    if (parseInt(e.target.value) < 0) (e.target.value = '0')
     setAmt(e.target.value)
  //   console.log(e.target.value)
 }
 
 
 function buttonClick() {
+    fetch("/getcart/")
+    .then(res => res.json())
+    .then(data => console.log(data))
 
     
 }
@@ -148,7 +145,7 @@ function button2click(){
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                Quantity: <input type="text" id="productQuantity" class="quantity" defaultValue="1" onChange={changeAmt} />
+                Quantity: <input type="number" id="productQuantity" class="quantity" defaultValue="1" onChange={changeAmt} />
                 <button onClick={addToCart}>Add to Cart</button>
             </div>
 
