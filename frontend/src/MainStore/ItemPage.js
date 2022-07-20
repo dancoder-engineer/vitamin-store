@@ -9,6 +9,7 @@ function ItemPage({}) {
 
 let [itemData, setItemData] = useState()
 let [reviews, setReviews] = useState()
+let [amt, setAmt] = useState("1")
 
 let [user, setUser] = useState([])
 
@@ -20,7 +21,37 @@ function youGetMe() {
   .then(data => setUser(data))
 }
 
+function createCartSlot() {
+    let fullurl = "/createcart/"
+    let dat = {id : params.id}
+    fetch(fullurl, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(dat)
+    })
+    .then(res => res.json())
+//    .then(data => console.log(data))
+}
 
+function addToCart() {
+    let fullurl = "/updatecart/"
+    let dat = {
+        id: params.id,
+        amount: amt}
+    fetch(fullurl, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(dat)
+    })
+    .then(res => res.json())
+  //  .then(data => console.log(data))
+}
 
 const params = useParams()
 
@@ -28,6 +59,7 @@ const params = useParams()
 useEffect(() => {
  getReviews()
  youGetMe()
+ createCartSlot()
 }, [])
 
 function getReviews() {
@@ -76,37 +108,19 @@ function makeStars(amount) {
     return stars
 }
 
+function changeAmt(e){
+    setAmt(e.target.value)
+ //   console.log(e.target.value)
+}
+
 
 function buttonClick() {
 
-
-    let createInfo = {
-            firstname: "Dan",
-            lastname: "Seminara",
-            username: "CrawdKenny",
-            password: "HuiHui",
-            password_confirmation: "HuiHui",
-            kind:"Customer"
-    }
-
-    let fullurl = "/newuser/"
-    fetch(fullurl, {
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          method: "POST",
-          body: JSON.stringify(createInfo)
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
+    
 }
 
 function button2click(){
-    let fullurl = "/getme/"
-    fetch(fullurl)
-    .then(res => res.json())
-    .then(data => console.log(data))
+    
 }
 
 
@@ -134,8 +148,8 @@ function button2click(){
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                Quantity: <input type="text" id="productQuantity" class="quantity" value="1" />
-                <button onClick={button2click}>Add to Cart</button>
+                Quantity: <input type="text" id="productQuantity" class="quantity" defaultValue="1" onChange={changeAmt} />
+                <button onClick={addToCart}>Add to Cart</button>
             </div>
 
             <div class="reviewsHolder">

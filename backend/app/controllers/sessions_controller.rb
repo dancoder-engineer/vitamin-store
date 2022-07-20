@@ -1,6 +1,18 @@
 class SessionsController < ApplicationController
 
-  
+  def updateCart
+    whichItem=params[:id]
+    howMany=params[:amount]
+    session[:cart][whichItem] = howMany
+    render json: session
+  end
+
+  def createCart
+    whichItem = params[:id]
+    session[:cart] ||= {}
+    session[:cart][whichItem] ||= 0
+    render json: session
+  end
 
   #  skip_before_action :verify_authenticity_token
 
@@ -21,7 +33,8 @@ class SessionsController < ApplicationController
     end
 
     def extra
-#        session[:user_id] = 1
+        session[:test] = [1, 2, 3, 4, 5]
+        session[:test2] = ["a", "b", "c", "d", "e"]
         return render json: session
     end
 
