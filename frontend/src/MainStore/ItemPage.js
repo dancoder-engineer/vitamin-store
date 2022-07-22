@@ -10,6 +10,7 @@ function ItemPage({}) {
 let [itemData, setItemData] = useState()
 let [reviews, setReviews] = useState()
 let [amt, setAmt] = useState("1")
+let [errorMessage, setErrorMessage] = useState(" ")
 
 let [user, setUser] = useState([])
 
@@ -43,7 +44,18 @@ function addToCart() {
         body: JSON.stringify(dat)
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        console.log(data)
+        if (data.old) {
+            document.querySelector("#productQuantity").value = data.old
+            setErrorMessage(data.error)
+            setAmt(data.old)
+        } else {
+            setErrorMessage(" ")
+        }
+    
+    
+    })
 }
 
 const params = useParams()
@@ -146,7 +158,8 @@ function button2click(){
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
                 Quantity: <input type="number" id="productQuantity" class="quantity" defaultValue="1" onChange={changeAmt} />
-                <button onClick={addToCart}>Add to Cart</button>
+                <button onClick={addToCart}>Add to Cart</button><br />
+                <p>{errorMessage}</p>
             </div>
 
             <div class="reviewsHolder">

@@ -14,13 +14,13 @@ class SessionsController < ApplicationController
     
     if (item[:stock] + oldAmt - howMany) < 0
       session[:cart][whichItem] = oldAmt
-      return render json: {error: "Not enough stock."}
+      return render json: {error: "Not enough stock.", old: oldAmt}
     else
       session[:cart][whichItem] = howMany
       newStock = item[:stock] + oldAmt - howMany
       item.update({stock: newStock })
       session[:cart] = session[:cart].select{ |a, v| v > 0}
-      return render json: item[:stock]
+      return render json: item
     end
   end
 
