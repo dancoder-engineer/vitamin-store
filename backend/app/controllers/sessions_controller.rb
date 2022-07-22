@@ -6,11 +6,22 @@ class SessionsController < ApplicationController
 
   def updateCart
     whichItem=params[:id]
-    howMany=params[:amount]
+    howMany=params[:amount].to_i
     session[:cart][whichItem] ||= 0
-    session[:cart][whichItem] = howMany
-    session[:cart] = session[:cart].select{ |a, v| v.to_i > 0}
-    render json: session
+    oldAmt = session[:cart][whichItem]
+    
+    item = Item.find_by(id: whichItem)
+    
+    if (item[:stock] + oldAmt - howMany) < 0
+      session[:cart][whichItem] = oldAmt
+      return render json: {error: "Not enough stock."}
+    else
+      session[:cart][whichItem] = howMany
+      newStock = item[:stock] + oldAmt - howMany
+      item.update({stock: newStock })
+      session[:cart] = session[:cart].select{ |a, v| v > 0}
+      return render json: item[:stock]
+    end
   end
 
   def createCart

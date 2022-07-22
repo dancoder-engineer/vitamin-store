@@ -11,6 +11,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.text :blurb
       t.string :picurl
       t.boolean :featured
+      t.integer :stock
       t.timestamps
     end
   end
