@@ -10,6 +10,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import LogOut from './LogPages/LogOut.js'
 import LogIn from './LogPages/LogIn.js'
 import NewUser from './LogPages/NewUser.js'
+import Cart from './checkout/Cart.js'
 
 
 const url=""
@@ -28,7 +29,8 @@ root.render(
         <Route path='/test/' element={<Test />} />
         <Route path='/logout/' element={<LogOut />} />
         <Route path='/login/' element={<LogIn />} />
-        <Route path='newuser' element={ <NewUser /> } />
+        <Route path='/newuser/' element={ <NewUser /> } />
+        <Route path='/cart/' element= { <Cart /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

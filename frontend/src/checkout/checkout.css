@@ -1,0 +1,21 @@
+.CartItem{
+        display:grid;
+}
+
+.itemPic{
+    height:100px;
+}
+
+.CartItemData{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.middleText{
+    text-align: center;
+}
+
+.centered{
+    margin:auto;
+    display:block;
+}

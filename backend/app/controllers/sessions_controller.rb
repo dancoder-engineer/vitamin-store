@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
       newStock = item[:stock] + oldAmt - howMany
       item.update({stock: newStock })
       session[:cart] = session[:cart].select{ |a, v| v > 0}
-      return render json: item
+      return render json: session[:cart]
     end
   end
 

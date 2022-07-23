@@ -46,7 +46,7 @@ function addToCart() {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        if (data.old) {
+        if (data.error) {
             document.querySelector("#productQuantity").value = data.old
             setErrorMessage(data.error)
             setAmt(data.old)
@@ -116,7 +116,6 @@ function makeStars(amount) {
 function changeAmt(e){
     if (parseInt(e.target.value) < 0) (e.target.value = '0')
     setAmt(e.target.value)
- //   console.log(e.target.value)
 }
 
 
