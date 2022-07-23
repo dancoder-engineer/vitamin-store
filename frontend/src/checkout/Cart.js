@@ -12,13 +12,21 @@ function Cart() {
     function grabCart() {
         fetch('/getcart/')
         .then(res => res.json())
-        .then(data => makeItems(data))
+        .then((data) => {
+            makeItems(data)
+        })
     }
 
     function makeItems(cartData) {
+        
         if (cartData) { 
-           setCartItems (Object.keys(cartData).map(i => <CartItem item={i} amount={cartData[i]} />) )
+           setCartItems (Object.keys(cartData).map(i => <CartItem item={i} amount={cartData[i]} redoItems={redoItems}  key={i} />) )
         }
+    }
+
+    function redoItems() {
+        setCartItems([])
+        grabCart()
     }
 
 

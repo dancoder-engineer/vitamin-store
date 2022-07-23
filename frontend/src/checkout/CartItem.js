@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import './checkout.css'
 
-function CartItem({item, amount}) {
+function CartItem({item, amount, redoItems}) {
 
     let [itemData, setItemData] = useState({})
     let [errorMessage, setErrorMessage] = useState(" ")
     let [amt, setAmt] = useState(amount)
+
 
     const boxId = "productQuantity" + itemData.id
 
@@ -17,18 +18,18 @@ function CartItem({item, amount}) {
 
     function grabItem() {
         let url = '/items/' + item
-        console.log(url)
         fetch(url)
         .then(res => res.json())
         .then(data => setItemData(data))
     }
 
     
-function addToCart() {
+function addToCart(del = 0) {
     let fullurl = "/updatecart/"
     let dat = {
         id: item,
         amount: amt}
+    if (del === 1) {dat.amount = 0}
     fetch(fullurl, {
         headers: {
             'Accept': 'application/json',
@@ -41,7 +42,7 @@ function addToCart() {
     .then(data => {
         
         if (data.error) {
-            console.log(data)
+        //    console.log(data)
 
             document.querySelector('#' + boxId).value = data.old
             setErrorMessage(data.error)
@@ -50,10 +51,15 @@ function addToCart() {
             
             console.log(data)
             setErrorMessage(" ")
+            redoItems()
         }
     
     
     })
+}
+ 
+function deleteFromCart() {
+    addToCart(1)
 }
 
 function changeAmt(e){
@@ -67,8 +73,8 @@ function changeAmt(e){
         <div>
         {itemData && ( <div className= 'CartItem'>  <div className="CartItemPic"><img className='itemPic' src={itemData.picurl} /> </div>
         <div className='CartItemData'> {itemData.name}<br />
-        Quantity: <input type="number" id={boxId} class="quantity" defaultValue={amount} onChange={changeAmt} />
-                <button onClick={addToCart}>Add to Cart</button><br />
+        Quantity: <input type="number" id={boxId} className="quantity" defaultValue={amount} onChange={changeAmt} />
+                <button onClick={addToCart}>Update Amount</button> <button onClick={deleteFromCart}>Remove from Cart</button> <br />
                 <p>{errorMessage}</p>
           
 

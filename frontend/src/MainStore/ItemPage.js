@@ -9,11 +9,18 @@ function ItemPage({}) {
 
 let [itemData, setItemData] = useState()
 let [reviews, setReviews] = useState()
-let [amt, setAmt] = useState("1")
+let [amt, setAmt] = useState(null)
 let [errorMessage, setErrorMessage] = useState(" ")
 
 let [user, setUser] = useState([])
 
+function grabCart() {
+    fetch('/getcart/')
+    .then(res => res.json())
+    .then((data) => {
+        setAmt(data[params.id])
+    })
+}
 
 function youGetMe() {
 
@@ -65,6 +72,7 @@ useEffect(() => {
  getReviews()
  youGetMe()
  createCartSlot()
+ grabCart()
 }, [])
 
 function getReviews() {
@@ -156,7 +164,7 @@ function button2click(){
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                Quantity: <input type="number" id="productQuantity" class="quantity" defaultValue="1" onChange={changeAmt} />
+                Quantity: {amt && <input type="number" id="productQuantity" class="quantity" defaultValue={amt} onChange={changeAmt} /> }
                 <button onClick={addToCart}>Add to Cart</button><br />
                 <p>{errorMessage}</p>
             </div>
