@@ -11,14 +11,21 @@ let [itemData, setItemData] = useState()
 let [reviews, setReviews] = useState()
 let [amt, setAmt] = useState(null)
 let [errorMessage, setErrorMessage] = useState(" ")
+let [addButton, setAddButton] = useState(null)
 
 let [user, setUser] = useState([])
 
 function grabCart() {
     fetch('/getcart/')
     .then(res => res.json())
-    .then((data) => {
-        setAmt(data[params.id])
+    .then((data) => { console.log(data)
+        if (data[params.id]) {
+            setAddButton("Update Cart")
+            setAmt(data[params.id])
+        } else {
+            setAddButton("Add to Cart")
+            setAmt(0)
+        }
     })
 }
 
@@ -69,10 +76,10 @@ const params = useParams()
 
 
 useEffect(() => {
+ grabCart()
  getReviews()
  youGetMe()
  createCartSlot()
- grabCart()
 }, [])
 
 function getReviews() {
@@ -164,8 +171,8 @@ function button2click(){
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                Quantity: {amt && <input type="number" id="productQuantity" class="quantity" defaultValue={amt} onChange={changeAmt} /> }
-                <button onClick={addToCart}>Add to Cart</button><br />
+                Quantity: {addButton && <input type="number" id="productQuantity" class="quantity" defaultValue={amt} onChange={changeAmt} /> }
+                <button onClick={addToCart}>{addButton}</button><br />
                 <p>{errorMessage}</p>
             </div>
 

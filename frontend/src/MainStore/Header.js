@@ -44,7 +44,7 @@ function Header({searchFunc, search, user, youGetMe}) {
 
     let loggedOutPart = (
         <div>
-            <NavLink to="../login">Log In</NavLink>     <NavLink to="../newuser">New User</NavLink>
+            <NavLink to="../login">Log In</NavLink>     <NavLink to="../newuser">New User</NavLink>     <NavLink to="../cart">Cart</NavLink>
         </div>
     )
 
