@@ -280,8 +280,7 @@ Item.create ({
 	blurb:"Are you an uptight square? Would you rather be more mellow? Then take some CBD! Although, magnesium ain't half bad for your stress and an	iety, either.",
 	price:17.99,
 	picurl:"https://imgur.com/xDhqyCG.jpg",
-	featured: false,
-	stock: 50
+	featured: false
 })
 
 Item.create ({
@@ -294,8 +293,7 @@ Item.create ({
 	blurb:"Here's the pill for all you banana haters! Buy a bottle and enjoy your banana-free e	istence. Does that make you weird? Sure, but that just leaves more bananas for the rest of us!",
 	price:18.99,
 	picurl:"https://imgur.com/ZpJS0G7.jpg",
-	featured: false,
-	stock: 50
+	featured: false
 })
 
 Item.create ({
