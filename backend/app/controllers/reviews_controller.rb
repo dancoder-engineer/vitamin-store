@@ -45,9 +45,16 @@ class ReviewsController < ApplicationController
             render json: reviews, status: 200
         end
 
+
+        
+        def byitem
+            reviews = Review.where(item_id: params[:id])
+            render json: reviews, status: 200
+        end
+
     private
 
     def allowed
-        params.permit(:reviewtext, :stars, :user_id, :item_id)
+        params.permit(:title, :reviewtext, :stars, :user_id, :item_id)
     end
 end

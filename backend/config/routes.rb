@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/getme', to: 'sessions#getme'
   get '/extra', to: 'sessions#extra'
   get '/logout', to: 'sessions#logout'
+  get '/reviewsbyitem/:id', to: 'reviews#byitem'
   get '/createcart/', to: 'sessions#createCart'
   post '/updatecart/', to: 'sessions#updateCart'
   get '/getcart/', to: 'sessions#getCart'

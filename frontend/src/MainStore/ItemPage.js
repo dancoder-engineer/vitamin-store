@@ -12,13 +12,16 @@ let [reviews, setReviews] = useState()
 let [amt, setAmt] = useState(null)
 let [errorMessage, setErrorMessage] = useState(" ")
 let [addButton, setAddButton] = useState(null)
+let [reviewData, setReviewData] = useState({stars: 5})
+let [showReviewBox, setShowReviewBox] = useState(false)
+let [user, setUser] = useState(null)
 
-let [user, setUser] = useState([])
+let userId = null
 
 function grabCart() {
     fetch('/getcart/')
     .then(res => res.json())
-    .then((data) => { console.log(data)
+    .then((data) => { // console.log(data)
         if (data[params.id]) {
             setAddButton("Update Cart")
             setAmt(data[params.id])
@@ -33,7 +36,10 @@ function youGetMe() {
 
   fetch("/getme/")
   .then(res => res.json())
-  .then(data => setUser(data))
+  .then(data => {//  console.log(data)
+    if(data) { setShowReviewBox(true) }
+    setUser(data)
+  })
 }
 
 function createCartSlot() {
@@ -66,6 +72,7 @@ function addToCart() {
             setAmt(data.old)
         } else {
             setErrorMessage(" ")
+            grabCart()
         }
     
     
@@ -75,22 +82,42 @@ function addToCart() {
 const params = useParams()
 
 
+
+useEffect(() => {
+
+if (user) {
+    for (let i in reviews) { getitemData() }
+
+} }, [user]
+
+)
+
+
+
+
 useEffect(() => {
  grabCart()
- getReviews()
  youGetMe()
+ getitemData()
  createCartSlot()
+
+// for (let i in reviews) {    if (i.user_id === user.id) { setShowReviewBox(false) } }
+
 }, [])
 
-function getReviews() {
+function getitemData() {
     let fullurl = "/items/"+params.id
     fetch(fullurl)
 .then(res => res.json())
 .then(data => {
-    //console.log(data)
+  //  console.log(data)
     setItemData(data)
 
-    setReviews(data.reviews.map((i) => {
+    setReviews(data.reviews.map((i) => { 
+        if (user) {
+            if (user.id === i.user_id) { setShowReviewBox(false)}
+        }
+
         return (
         <div key={i.id}>
             <h3 class="centerText">{i.title} {makeStars(i.stars)}</h3>
@@ -142,25 +169,62 @@ function buttonClick() {
     
 }
 
-function button2click(){
+function changeReview(e){
+    let name = e.target.id
+    let content = e.target.value
+
+    setReviewData({
+        ...reviewData,
+        [name]: content
+    })
     
 }
 
 
+function sendReview() {
+
+    let submitIt={
+        ...reviewData,
+        user_id: user.id,
+        item_id: params.id
+    }
+
+    console.log(reviewData)
+    
+
+    let fullurl = "/reviews/"
+    fetch(fullurl, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(submitIt)
+    })
+    .then(res => res.json())
+    .then(data => {
+        getitemData()
+//        console.log(data)
+    })
+}
+
+
+
+
  return (
-        <div class = "bigDiv">
+        <div className = "bigDiv">
         <Header youGetMe={youGetMe} search={0} user={user}/> 
             
-        <div class="itemStoreMain">
-            <div class="itemName">
+        <div className="itemStoreMain">
+            <div className="itemName">
                 <h1>{itemData && itemData.name}</h1>
             </div>
 
-            <div class="pictureHolder">
-                <img class="itemPicture" src={itemData && itemData.picurl} />
+            <div className="pictureHolder">
+                <img className="itemPicture" src={itemData && itemData.picurl} />
             </div>
 
-            <div class="dataHolder">
+            <div className="dataHolder">
                 <p>
                     Brand: {itemData && itemData.brand}<br />
                     Dose: {itemData && itemData.dose}<br />
@@ -171,23 +235,24 @@ function button2click(){
                     {itemData && itemData.blurb}<br />
                 </p>
                 <h2>Price: ${itemData && itemData.price} <br /></h2>
-                Quantity: {addButton && <input type="number" id="productQuantity" class="quantity" defaultValue={amt} onChange={changeAmt} /> }
+                Quantity: {addButton && <input type="number" id="productQuantity" className="quantity" defaultValue={amt} onChange={changeAmt} /> }
                 <button onClick={addToCart}>{addButton}</button><br />
                 <p>{errorMessage}</p>
             </div>
 
-            <div class="reviewsHolder">
+            <div className="reviewsHolder">
                 {reviews && reviews}
             </div>
 
-            <div class="makeReviewHolder">
-                <div class="centeredItem">
-                    Title: <input type="text" id="title" value="1" />
-                    Stars: <input type="text" id="numberOfStars" class="quantity" value="1" />
+            {showReviewBox && (
+            <div className="makeReviewHolder">
+                <div className="centeredItem">
+                    Title: <input type="text" id="title" onChange={changeReview} />
+                    Stars: <input type="number" id="stars" className="quantity" min="1" max="5" defaultValue="5" onChange={changeReview} />
                 </div>
-                <textarea id="reviewText"  />
-                <button onClick={buttonClick} id="postReview" class="centeredItem">Post Review</button>
-            </div>
+                <textarea id="reviewtext" onChange={changeReview} />
+                <button onClick={sendReview} id="postReview" className="centeredItem">Post Review</button>
+            </div>)}
             <br /><br /><br />
 
         </div> </div>

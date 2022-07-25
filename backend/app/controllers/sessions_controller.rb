@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
 
 
     def login
-       # session.delete :user_id
+        session.delete :user_id
     #   protect_from_forgery
       #  session[:user_id] ||= 0
 
