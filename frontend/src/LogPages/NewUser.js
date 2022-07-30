@@ -52,7 +52,7 @@ function submit() {
 
     return(
     
-        <div class="mainDiv">
+        <div className="mainDiv">
             <h2>Create New User</h2><br />
             First Name:<br /><input type="text" name="firstname" onChange={handleChange}/><br />
             Last Name:<br /><input type="text" name="lastname" onChange={handleChange}/><br /><br />

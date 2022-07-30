@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import './checkout.css'
 
-function CartItem({item, amount, redoItems}) {
+function CartItem({item, amount, redoItems, bigTotal}) {
 
     let [itemData, setItemData] = useState({})
     let [errorMessage, setErrorMessage] = useState(" ")
     let [amt, setAmt] = useState(amount)
-
+    
 
     const boxId = "productQuantity" + itemData.id
 
@@ -20,7 +20,9 @@ function CartItem({item, amount, redoItems}) {
         let url = '/items/' + item
         fetch(url)
         .then(res => res.json())
-        .then(data => setItemData(data))
+        .then(data => { 
+            setItemData(data)
+        })
     }
 
     
@@ -48,8 +50,6 @@ function addToCart(del = 0) {
             setErrorMessage(data.error)
             setAmt(data.old)
         } else {
-            
-            console.log(data)
             setErrorMessage(" ")
             redoItems()
         }
@@ -67,6 +67,12 @@ function changeAmt(e){
     setAmt(e.target.value)
 }
 
+function getTotal(amount, price) {
+    let total = amount * parseFloat(price)
+
+    return total.toFixed(2)
+}
+
 
 
     return(
@@ -75,6 +81,7 @@ function changeAmt(e){
         <div className='CartItemData'> {itemData.name}<br />
         Quantity: <input type="number" id={boxId} className="quantity" defaultValue={amount} onChange={changeAmt} />
                 <button onClick={addToCart}>Update Amount</button> <button onClick={deleteFromCart}>Remove from Cart</button> <br />
+                <div className='prices'><span className='justifyLeft'>Unit Price ${itemData.price}</span>   <span className='justifyRight'>Total Price: ${getTotal(amount, itemData.price)}</span></div>
                 <p>{errorMessage}</p>
           
 

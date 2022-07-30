@@ -16,7 +16,6 @@ let [reviewData, setReviewData] = useState({stars: 5})
 let [showReviewBox, setShowReviewBox] = useState(false)
 let [user, setUser] = useState(null)
 
-let userId = null
 
 function grabCart() {
     fetch('/getcart/')
@@ -65,7 +64,6 @@ function addToCart() {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         if (data.error) {
             document.querySelector("#productQuantity").value = data.old
             setErrorMessage(data.error)

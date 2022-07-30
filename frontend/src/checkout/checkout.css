@@ -19,3 +19,18 @@
     margin:auto;
     display:block;
 }
+
+.prices {
+    display: grid;
+    width:459px
+}
+
+.justifyLeft {
+    grid-column-start: 1;
+    text-align: left;
+}
+
+.justifyRight {
+    grid-column-start: 2;
+    text-align: left;
+}

@@ -28,7 +28,7 @@ function searchFunc(a) {
   fetch("/searchitems/" + a)
 .then(res => res.json())
 .then(data => { console.log(data)
-  setItems(data.map((i) => <Card key={i.id} itemData={i} class="cardDiv"/>))
+  setItems(data.map((i) => <Card key={i.id} itemData={i} className="cardDiv"/>))
 }
 )
 }
@@ -37,7 +37,7 @@ function getFeaturedItems() {
   fetch("/featureditems/")
 .then(res => res.json())
 .then(data => { //console.log(data)
-  setItems(data.map((i) => <Card key={i.id} itemData={i} class="cardDiv"/>))
+  setItems(data.map((i) => <Card key={i.id} itemData={i} className="cardDiv"/>))
 
 })
 }
@@ -53,10 +53,12 @@ useEffect(() => {
 
 
   return (
-    <div class="mainStore">
-      <div class="things">
+    <div className="mainStore">
+      <div className="things">
         <Header searchFunc={searchFunc} youGetMe={youGetMe} search={1} user={user} />
-        <div class="cardsHolder">{items && items}</div>
+        <div className="cardsHolder">{items && items}</div>
+
+        
     </div></div>
 
   );

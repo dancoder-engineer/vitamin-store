@@ -17,7 +17,11 @@ const url=""
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
+<script
+  async
+  src="https://pay.google.com/gp/p/js/pay.js"
+  onload="onGooglePayLoaded()"
+></script>
 
 
 root.render(

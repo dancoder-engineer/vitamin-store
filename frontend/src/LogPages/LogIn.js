@@ -39,7 +39,7 @@ function LogIn() {
         })
         .then(res => res.json())
         .then(data => { 
-            console.log(data)
+    //        console.log(data)
             if(data === null) {
                 setFaild ("User name or password incorrect.")               
             } else {
@@ -54,7 +54,7 @@ function LogIn() {
 
 return(
     
-    <div class="mainDiv">
+    <div className="mainDiv">
         <h2>Log In</h2><br />
         User Name:<br /><input type="text" name="username" onChange={handleChange}/><br />
         Password:<br /><input type="text" name="password" onChange={handleChange}/><br />

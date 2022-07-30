@@ -9,7 +9,7 @@ function LogOut() {
 //        .then(data => youGetMe())
 
 return (
-    <div class="mainDiv">
+    <div className="mainDiv">
         You have been logged out.<br />
         <NavLink to="/">Please click here to return to the store.</NavLink>
     </div>
