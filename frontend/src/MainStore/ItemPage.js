@@ -118,9 +118,9 @@ function getitemData() {
 
         return (
         <div key={i.id}>
-            <h3 class="centerText">{i.title} {makeStars(i.stars)}</h3>
-            <p class="centerText">{i.reviewtext}</p>
-            <p class="smallText">written by {i.username} on {parseDate(i.created_at)}</p><br /><br /><br />
+            <h3 className="centerText">{i.title} {makeStars(i.stars)}</h3>
+            <p className="centerText">{i.reviewtext}</p>
+            <p className="smallText">written by {i.username} on {parseDate(i.created_at)}</p><br /><br /><br />
         </div>
 
     )}

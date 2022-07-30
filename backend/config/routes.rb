@@ -4,9 +4,9 @@ Rails.application.routes.draw do
  # resources :itemvitamins
  # resources :usercreditcards
  # resources :useraddrs
-  resources :creditcards
+ # resources :creditcards
  # resources :carts
-  resources :addresses, only: [:index]
+ # resources :addresses, only: [:index]
   resources :vitamins
   resources :items
   resources :reviews
