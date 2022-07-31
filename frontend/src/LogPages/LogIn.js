@@ -29,7 +29,7 @@ function LogIn() {
     function handleLogIn() {
 
         let fullurl = "/login/"
-        fetch(fullurl, {
+        fetch("/login/", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

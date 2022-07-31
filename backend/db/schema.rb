@@ -11,40 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_28_183113) do
-  create_table "addresses", force: :cascade do |t|
-    t.string "street1"
-    t.string "street2"
-    t.string "town"
-    t.string "state"
-    t.string "zipcode"
-    t.integer "order_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cartitems", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "item_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.integer "items"
-    t.integer "amounts"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "creditcards", force: :cascade do |t|
-    t.string "nameoncard"
-    t.string "number"
-    t.string "expiration"
-    t.string "cvc"
-    t.integer "user_id"
-    t.integer "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,18 +44,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_28_183113) do
   create_table "orderitems", force: :cascade do |t|
     t.integer "order_id"
     t.integer "item_id"
+    t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "items"
-    t.integer "amounts"
+    t.integer "user_id"
     t.string "fulfilled"
     t.string "fulfilled_by"
-    t.integer "user_id"
-    t.integer "address_id"
-    t.integer "creditcard_id"
+    t.float "subtotal"
+    t.float "stax"
+    t.float "grandtotal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

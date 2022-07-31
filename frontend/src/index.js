@@ -11,6 +11,7 @@ import LogOut from './LogPages/LogOut.js'
 import LogIn from './LogPages/LogIn.js'
 import NewUser from './LogPages/NewUser.js'
 import Cart from './checkout/Cart.js'
+import OrderDone from './checkout/OrderDone.js'
 
 
 const url=""
@@ -35,6 +36,7 @@ root.render(
         <Route path='/login/' element={<LogIn />} />
         <Route path='/newuser/' element={ <NewUser /> } />
         <Route path='/cart/' element= { <Cart /> } />
+        <Route path='/orderdone/' element={ <OrderDone /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

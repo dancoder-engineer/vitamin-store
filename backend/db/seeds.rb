@@ -356,69 +356,6 @@ User.create({
 
 
 
-
-Address.create({
-	street1: "53 Richmond Blvd.",
-    street2: "Unit 1b",
-    town: "Ronkonkoma",
-    state: "NY",
-    zipcode: "11779",
-
-	user_id: 2,
-	#order_id: 5
-})
-
-Address.create({
-    street1: "107 Sea Cove Rd.",
-    street2: "",
-    town: "Northport",
-    state: "NY",
-    zipcode: "11768",
-
-	user_id: 3,
-#	order_id: 5
-})
-
-Address.create({
-    street1: "1110 Scott Dr.",
-    street2: "",
-    town: "N Valley Stream",
-    state: "NY",
-    zipcode: "11580",
-
-	user_id: 1,
-#	order_id: 5
-})
-
-
-
-Creditcard.create({
-	nameoncard: "HuiHui Zhu",
-	number: "12345",
-	expiration: "04/28",
-	cvc: "123",
-	user_id: 1, 
-	address_id: 1
-})
-
-Creditcard.create({
-	nameoncard: "Hao Zhang",
-	number: "12345",
-	expiration: "04/28",
-	cvc: "123",
-	user_id: 2, 
-	address_id: 2
-})
-
-Creditcard.create({
-	nameoncard: "Victoria Marziotto",
-	number: "12345",
-	expiration: "04/28",
-	cvc: "123",
-	user_id: 3, 
-	address_id: 3
-})
-
 Review.create({
 	username: "TheBunnyWhoSqueaks",
 	title: "Guinea Pigs Love It!",

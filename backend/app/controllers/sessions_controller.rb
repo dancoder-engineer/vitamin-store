@@ -58,7 +58,7 @@ class SessionsController < ApplicationController
         session.delete :user_id
     #   protect_from_forgery
       #  session[:user_id] ||= 0
-
+      
 
         if session[:user_id] && session[:user_id] != 0
          #   return render json: session
@@ -71,6 +71,7 @@ class SessionsController < ApplicationController
         if user&.authenticate(params[:password])
             session[:user_id] = user.id
         end
+      
             render json: user
       end
 
@@ -82,6 +83,12 @@ class SessionsController < ApplicationController
       else
         render json:{log:"Not logged in"}
       end
+    end
+
+    def emptyCart
+      session.delete :cart
+      session[:cart] ||= {}
+      render json:session[:cart]
     end
 
     private
