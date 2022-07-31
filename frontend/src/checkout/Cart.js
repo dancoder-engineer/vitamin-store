@@ -1,37 +1,116 @@
 import React, {useState, useEffect} from 'react'
 import CartItem from './CartItem.js'
+import {useNavigate} from 'react-router-dom'
 
 import GooglePayButton from '@google-pay/button-react'
 
+
 function Cart() {
 
+    const history = useNavigate() 
     let [cartItems, setCartItems] = useState([])
     let [subtotal, setSubtotal] = useState(0.00)
     let [grandTotal, setGrandTotal] = useState(0.00)
     let [paymentInfo, setPaymentInfo] = useState({})
-
+    let [user, setUser] = useState({})
+    let [cart, setCart] = useState([]) //this may not be good, but the cart dats isnt set otherwise
     let salesTax = .085
+    let userId = 0
+
 
     useEffect(() => setGrandTotal((subtotal * (salesTax + 1)).toFixed(2)), [subtotal])
    
     useEffect(() => 
-       {completeOrder(paymentInfo)}, [paymentInfo] )
+       { if (paymentInfo.paymentMethodData) {
+        completeOrder(paymentInfo) }
+        }, [paymentInfo] )
 
     useEffect(()  => { 
     grabCart()
+    youGetMe("/getme/")
+
 
 }, [])
 
+function youGetMe(url) {
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {//  console.log(data)
+     // console.log(data)
+        setUser(data) 
+    })
+  }
+
+
+
     function completeOrder(paymentData) {
-        console.log(paymentData)
+
+        let submitIt = {
+            user_id: user.id,
+            fulfilled: "Ordered",
+            fulfilled_by: 0,
+            subtotal: subtotal,
+            stax: salesTax,
+            grandtotal: grandTotal
+        }
+
+
+  //      console.log(paymentData)
+        let fullurl = "/orders/"
+        fetch(fullurl, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify(submitIt)
+        })
+        .then(res => res.json())
+        .then(data => { //console.log(data)
+            makeOrderItems(data.id)
+          
+            history('../orderdone')
+           
+            })
     }
+
+    function makeOrderItems(orderID) { 
+        for (let i of Object.keys(cart)) {
+           let submitIt = {
+                item_id: i,
+                amount: cart[i],
+                order_id: orderID
+            }
+
+            fetch("/orderitems/", {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify(submitIt)
+            })
+            .then(res => res.json())
+            .then(data => { //console.log(data)
+                
+               
+                })
+
+
+        }
+        
+    }
+
 
     function grabCart() {
         fetch('/getcart/')
         .then(res => res.json())
         .then((data) => {
             makeGrandTotal(data)
+            setCart(data)
             makeItems(data)
+            
             
         })
     }
@@ -131,10 +210,12 @@ function Cart() {
             <h1 className='middleText'>Cart</h1>
             {cartItems}
             <br />
-            Subtotal: ${subtotal}<br />
-            Sales Tax: {salesTax * 100}%<br />
-            Total: ${grandTotal}
-            <div>{gpButton}</div>
+            <div className='gpButton'>
+                Subtotal: ${subtotal}<br />
+                Sales Tax: {salesTax * 100}%<br />
+                Total: ${grandTotal}<br />
+                {gpButton}
+            </div>
 
 
         </div>
