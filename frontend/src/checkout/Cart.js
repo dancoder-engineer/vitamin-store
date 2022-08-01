@@ -12,11 +12,12 @@ function Cart() {
     let [subtotal, setSubtotal] = useState(0.00)
     let [grandTotal, setGrandTotal] = useState(0.00)
     let [paymentInfo, setPaymentInfo] = useState({})
-    let [user, setUser] = useState({})
+    let [user, setUser] = useState(null)
     let [cart, setCart] = useState([]) //this may not be good, but the cart dats isnt set otherwise
     let salesTax = .085
     let userId = 0
 
+ //   useEffect(() => grabCart(), [])
 
     useEffect(() => setGrandTotal((subtotal * (salesTax + 1)).toFixed(2)), [subtotal])
    
@@ -175,6 +176,7 @@ function youGetMe(url) {
             function makeGrandTotal(cartData) {
                 let total = 0.00
                 let iterations = 0
+                if (Object.keys(cartData).length === 0) { setSubtotal(0) }
                 for (let i of Object.keys(cartData)) {
                     let url = '/items/' + i
                     fetch(url)
@@ -214,7 +216,7 @@ function youGetMe(url) {
                 Subtotal: ${subtotal}<br />
                 Sales Tax: {salesTax * 100}%<br />
                 Total: ${grandTotal}<br />
-                {gpButton}
+                {(user & subtotal > 0) ? gpButton : null}
             </div>
 
 
