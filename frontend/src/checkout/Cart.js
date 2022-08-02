@@ -45,6 +45,7 @@ function youGetMe(url) {
 
 
 
+
     function completeOrder(paymentData) {
 
         let submitIt = {
@@ -93,9 +94,8 @@ function youGetMe(url) {
                 body: JSON.stringify(submitIt)
             })
             .then(res => res.json())
-            .then(data => { //console.log(data)
-                
-               
+            .then(data => { 
+                //console.log(data)
                 })
 
 
@@ -205,7 +205,7 @@ function youGetMe(url) {
         grabCart()
     }
 
-
+console.log(user && subtotal > 0)
 
     return(
         <div>
@@ -216,7 +216,7 @@ function youGetMe(url) {
                 Subtotal: ${subtotal}<br />
                 Sales Tax: {salesTax * 100}%<br />
                 Total: ${grandTotal}<br />
-                {(user & subtotal > 0) ? gpButton : null}
+                {(user && subtotal > 0) ? gpButton : null}
             </div>
 
 

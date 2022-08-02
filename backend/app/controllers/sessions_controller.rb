@@ -32,7 +32,9 @@ class SessionsController < ApplicationController
   #  skip_before_action :verify_authenticity_token
 
   def newUser
-    user = User.create(allowed)
+    user = User.create!(allowed)
+ # rescue ActiveRecord:RecordInvalid => errors
+  # return render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
     session[:user_id] = user.id
     render json: user, status: :created
   end

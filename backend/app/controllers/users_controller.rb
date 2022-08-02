@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 
     def create
         user = User.create!(allowed)
+
+ 
         render json: user, status: :created
     end
 

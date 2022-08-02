@@ -45,7 +45,9 @@ function submit() {
             if (data.id) {
                 history('../')
             } else {
-                setFaild ("Please fill in all of the fields..")
+                let longness = data.exception.split(':')[4].length - 1
+                let errorMess = data.exception.split(':')[4].slice(0, longness)
+                setFaild (errorMess)
             }
             })
     }
@@ -57,8 +59,8 @@ function submit() {
             First Name:<br /><input type="text" name="firstname" onChange={handleChange}/><br />
             Last Name:<br /><input type="text" name="lastname" onChange={handleChange}/><br /><br />
             User Name:<br /><input type="text" name="username" onChange={handleChange}/><br />
-            Password:<br /><input type="text" name="password" onChange={handleChange}/><br />
-            Retype Password:<br /><input type="text" name="password_confirmation" onChange={handleChange}/><br /><br />
+            Password:<br /><input type="password" name="password" onChange={handleChange}/><br />
+            Retype Password:<br /><input type="password" name="password_confirmation" onChange={handleChange}/><br /><br />
             <button onClick={submit}>Log In</button>
             <br /> <br />
             <p>{faild}</p>
