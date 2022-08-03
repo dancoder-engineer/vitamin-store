@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :orders, only: [:index, :create]
   resources :orderitems, only: [:index, :create]
-  resources :users, except: [:destroy]
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get '/reviewsbyuser/:id', to: 'reviews#byuser'

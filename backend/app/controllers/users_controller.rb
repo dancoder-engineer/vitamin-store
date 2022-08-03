@@ -40,6 +40,17 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        user = User.find_by(id: params[:id])
+        session.delete :user_id        
+        if user
+            user.destroy
+            return render json: {message: "It is done."}
+        end
+        render json: {message: "You should never see this."}
+    end
+
+
 
     private
     

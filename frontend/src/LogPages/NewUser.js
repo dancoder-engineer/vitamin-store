@@ -10,7 +10,8 @@ function NewUser() {
 
     let [submitIt, setSubmitIt] = useState({
         username: "",
-        password: ""
+        password: "",
+        kind: "Customer"
     })
 
 

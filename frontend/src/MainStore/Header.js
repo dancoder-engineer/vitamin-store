@@ -39,7 +39,7 @@ function Header({searchFunc, search, user, youGetMe}) {
 
     let loggedInPart = (
         <div>Hello, {user && user.firstname}. 
-        <NavLink to="../logout">Log Out</NavLink>  <NavLink to="../cart">Cart</NavLink> </div>
+        <NavLink to="../logout">Log Out</NavLink>  <NavLink to="../cart">Cart</NavLink> <NavLink to="../deleteacct">Delete my Account</NavLink> </div>
     )
 
     let loggedOutPart = (
