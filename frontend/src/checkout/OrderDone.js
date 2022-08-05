@@ -10,7 +10,7 @@ function OrderDone() {
         fetch("/emptycart/")
         .then(res => res.json())
         .then(data => {  console.log("data")
-          console.log(data)
+        //  console.log(data)
           setEmptiedcart(true)
         })
     }, [])

@@ -22,6 +22,7 @@ function Cart() {
     useEffect(() => setGrandTotal((subtotal * (salesTax + 1)).toFixed(2)), [subtotal])
    
     useEffect(() => 
+    
        { if (paymentInfo.paymentMethodData) {
         completeOrder(paymentInfo) }
         }, [paymentInfo] )
@@ -155,14 +156,23 @@ function youGetMe(url) {
                                 countryCode:"US"
                             },
                             shippingAddressRequired:true,
-                            callbackIntents:["PAYMENT_AUTHORIZATION"]
-                        }}
+//                            shippingOptionRequired:true,
+//                            shippingOptionParameters:storeService.getShippingOptionParamaters(),
+ //                           callbackIntents:["PAYMENT_AUTHORIZATION", 'SHIPPING_ADDRESS', 'SHIPPING_OPTION']
+//                                 callbackIntents:["PAYMENT_AUTHORIZATION"]
+}}
 
-                        onLoadPaymentData={paymentRequest => paymentRequest }
-                        onPaymentAuthorized={paymentData => {
-                            setPaymentInfo(paymentData)
+                        onLoadPaymentData={paymentRequest => {
+                            console.log("b", paymentRequest)
+                            setPaymentInfo(paymentRequest)
                             return { transactionState: "SUCCESS" }
-                        }}
+                         } }
+//                        onPaymentAuthorized={paymentData => {
+                        //    console.log("a", paymentData)
+                           // setPaymentInfo(paymentData)
+//                            return { transactionState: "SUCCESS" }
+//                            return paymentData
+//                        }}
                         existingPaymentMethodRequired="false"
                         buttonColor="Black"
                         buttonType="Buy"
@@ -205,7 +215,7 @@ function youGetMe(url) {
         grabCart()
     }
 
-console.log(user && subtotal > 0)
+//console.log(user && subtotal > 0)
 
     return(
         <div>
