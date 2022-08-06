@@ -55,7 +55,7 @@ useEffect(() => {
   return (
     <div className="mainStore">
       <div className="things">
-        <Header searchFunc={searchFunc} youGetMe={youGetMe} search={1} user={user} />
+        <Header searchFunc={searchFunc} search={1} user={user} />
         <div className="cardsHolder">{items && items}</div>
 
         
