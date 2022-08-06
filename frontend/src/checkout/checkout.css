@@ -4,6 +4,9 @@
 
 .itemPic{
     height:100px;
+    float:right;
+    margin-right: 30px;
+
 }
 
 .CartItemData{
@@ -38,6 +41,7 @@
 .gpButton {
     margin: auto;
     display: block;
+    text-align: center;
 }
 
 .mainDiv{

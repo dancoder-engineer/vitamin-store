@@ -3,40 +3,18 @@ import {NavLink} from 'react-router-dom'
 
 import "./MainStore.css"
 
-function Header({searchFunc, search, user, youGetMe}) {
+function Header({searchFunc, search, user}) {
 
   // console.log(user)
 
- let logo =  <img src="https://imgur.com/qMzJkwN.png" title='Complaining Stone Medicinals' alt="Complaining Stone Medicinals" className="logo"/>
- let loginPic =  <img src="https://imgur.com/eFhM0ZG.png" title='Log In' alt="Log In" className="headerImage"/>
- let newUserPic =  <img src="https://imgur.com/Gu4Z1L8.png" title='Create New User' alt="Create New User" className="headerImage"/>
- let cartPic =  <img src="https://imgur.com/cmy2RUU.png" title='Cart' alt="Cart" className="headerImage"/>
- let logOutPic =  <img src="https://imgur.com/7YAnRh4.png" title='Log Out' alt="Log Out" className="headerImage"/>
- let deletePic =  <img src="https://imgur.com/TOh61in.png" title='Delete my Account' alt="Delete my Account" className="headerImage"/>
+ let logo =  <img src="https://imgur.com/IKJaxNV.png" title='Complaining Stone Medicinals' alt="Complaining Stone Medicinals" className="logo"/>
+ let loginPic =  <img src="https://imgur.com/KEAhj4f.png" title='Log In' alt="Log In" className="headerImage"/>
+ let newUserPic =  <img src="https://imgur.com/PwulKQd.png" title='Create New User' alt="Create New User" className="headerImage"/>
+ let cartPic =  <img src="https://imgur.com/DSmAqNY.png" title='Cart' alt="Cart" className="headerImage"/>
+ let logOutPic =  <img src="https://imgur.com/LslMJRx.png" title='Log Out' alt="Log Out" className="headerImage"/>
+ let deletePic =  <img src="https://imgur.com/dfDAEXo.png" title='Delete my Account' alt="Delete my Account" className="headerImage"/>
 
- function TESTnewuser() {
 
-                let createInfo = {
-                        firstname: "Dan",
-                        lastname: "Seminara",
-                        username: "CrawdKenny",
-                        password: "HuiHui",
-                        password_confirmation: "HuiHjjhhfsui",
-                        kind:"Customer"
-                }
-
-                let fullurl = "/newuser/"
-                fetch(fullurl, {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    method: "POST",
-                    body: JSON.stringify(createInfo)
-                })
-                .then(res => res.json())
-                .then(data => youGetMe())
-}
 
  
 
@@ -69,11 +47,7 @@ function Header({searchFunc, search, user, youGetMe}) {
 
 
 
-    function handleLogout(){
-        fetch("/logout")
-        .then(res => res.json())
-        .then(data => youGetMe())
-    }
+
 
 
     function changeSearch(e){
@@ -86,7 +60,7 @@ function Header({searchFunc, search, user, youGetMe}) {
     }
     }
     return(
-        <div>
+        <div className="headerDiv">
             {user ? loggedInPart : loggedOutPart}
             {searchBar}
         </div>

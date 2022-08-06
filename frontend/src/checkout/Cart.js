@@ -4,6 +4,8 @@ import {useNavigate} from 'react-router-dom'
 
 import GooglePayButton from '@google-pay/button-react'
 
+import Header from '../MainStore/Header.js'
+import './checkout.css'
 
 function Cart() {
 
@@ -219,13 +221,14 @@ function youGetMe(url) {
 
     return(
         <div>
+            <Header search={0} user={user} />
             <h1 className='middleText'>Cart</h1>
             {cartItems}
             <br />
             <div className='gpButton'>
                 Subtotal: ${subtotal}<br />
                 Sales Tax: {salesTax * 100}%<br />
-                Total: ${grandTotal}<br />
+                Total: ${grandTotal}<br /><br />
                 {(user && subtotal > 0) ? gpButton : null}
             </div>
 
