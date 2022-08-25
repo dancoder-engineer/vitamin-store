@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  get '/byletter/', to: 'items#byLetter'
   get '/reviewsbyuser/:id', to: 'reviews#byuser'
   get '/featureditems', to: 'items#featured'
   get '/searchitems/:term', to: 'items#searchitems'

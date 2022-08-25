@@ -1,8 +1,16 @@
 class ItemsController < ApplicationController
 
+   
+
     def index
         items = Item.all
         render json: items, status: 200
+    end  
+
+    def byLetter
+        
+        items = Item.order(:name).pluck(:name)
+        return render json: items, status: 200
     end
 
     def featured

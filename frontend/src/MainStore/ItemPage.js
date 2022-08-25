@@ -206,6 +206,11 @@ function sendReview() {
     })
 }
 
+function byLetter() {
+    fetch ('/byletter/')
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
 
 
 
@@ -241,6 +246,8 @@ function sendReview() {
             <div className="reviewsHolder">
                 {reviews && reviews}
             </div>
+
+           
 
             {showReviewBox && (
             <div className="makeReviewHolder">

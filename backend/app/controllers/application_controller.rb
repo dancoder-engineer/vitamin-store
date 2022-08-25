@@ -2,6 +2,13 @@ class ApplicationController < ActionController::API
 
     include ActionController::Cookies
 
+
+    def authorize
+        if !session[:user_id]
+            return render json: {error: "Not Authorized"}, status: :unauthorized
+        end
+end
+
     
     def login
         # session.delete :user_id

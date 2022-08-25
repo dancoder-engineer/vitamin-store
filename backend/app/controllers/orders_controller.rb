@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 
+    before_action :authorize
+
     def create
         order = Order.create(permitted)
         render json: order, status: :created
