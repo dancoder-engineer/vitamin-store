@@ -80,7 +80,7 @@ function getTotal(amount, price) {
         {itemData && ( <div className= 'CartItem'>  <div className="CartItemPic"><img className='itemPic' src={itemData.picurl} /> </div>
         <div className='CartItemData'> {itemData.name}<br />
         Quantity: <input type="number" id={boxId} className="quantity" defaultValue={amount} onChange={changeAmt} />
-                <button onClick={addToCart}>Update Amount</button> <button onClick={deleteFromCart}>Remove from Cart</button> <br />
+                <button onClick={addToCart} className="buttn">Update Amount</button> <button className="buttn" onClick={deleteFromCart}>Remove from Cart</button> <br />
                 <div className='prices'><span className='justifyLeft'>Unit Price ${itemData.price}</span>   <span className='justifyRight'>Total Price: ${getTotal(amount, itemData.price)}</span></div>
                 <p>{errorMessage}</p>
           
