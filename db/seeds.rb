@@ -395,7 +395,7 @@ Review.create({
 	title: "Very Useful",
 	reviewtext: "My doctor recommended I take sodium suppliments, so I chose these. They've never steered me wrong.",
 	stars: 3,
-	user_id: vicky,id,
+	user_id: vicky.id,
 	item_id: sodium.id
 })
 
@@ -404,7 +404,7 @@ Review.create({
 	title: "High Quality Milk",
 	reviewtext: "I used to buy my milk at the supermarket, but they never have this brand. After drinking Clover Organic Farms Milk, I will never drink any other kind.",
 	stars: 5,
-	user_id: vicky,id,
+	user_id: vicky.id,
 	item_id: milk.id
 })
 
