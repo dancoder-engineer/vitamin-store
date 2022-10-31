@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if session[:cart]
        render json: session[:cart]
     else
-      render json: {[]}
+      render json: {}
     end
   end
 
