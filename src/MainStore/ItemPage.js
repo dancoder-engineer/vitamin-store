@@ -20,7 +20,7 @@ let [user, setUser] = useState(null)
 function grabCart() {
     fetch('/getcart/')
     .then(res => res.json())
-    .then((data) => { // console.log(data)
+    .then((data) => {  console.log(data)
         if (data[params.id]) {
             setAddButton("Update Cart")
             setAmt(data[params.id])
