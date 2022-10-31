@@ -9,7 +9,7 @@
 
 Vitamin.create ({
     name: "Vitamin A",
-    whatsitdo:"A is for 'a good vitamin'"
+    whatsitdo:"Helps form and maintain healthy teeth, bones, soft tissue, mucous membranes, and skin."
 })
 Vitamin.create ({
     name: "Vitamin B1",
@@ -33,39 +33,39 @@ Vitamin.create ({
 })
 Vitamin.create ({
     name: "Vitamin C",
-    whatsitdo: "The C means 'Crap vitamins come from other companies, good vitamins come only from us.'"
+    whatsitdo: "Also called ascorbic acid, this is an antioxidant that promotes healthy teeth and gums. It helps the body absorb iron and maintain healthy tissue. It is also essential for wound healing."
 })
 Vitamin.create ({
     name: "Calcium",
-    whatsitdo: "Builds strong bones. Haven't you ever seen a milk commercial!?"
+    whatsitdo: "Building strong bones and teeth."
 })
 Vitamin.create ({
     name: "Vitamin D",
-    whatsitdo: "D, as in 'do buy tons of this so our executives can be even richer.'"
+    whatsitdo: "Vitamin D is also known as the 'sunshine vitamin,' since it is made by the body after being in the sun. Ten to 15 minutes of sunshine 3 times a week is enough to produce the body's requirement of vitamin D for most people at most latitudes. People who do not live in sunny places may not make enough vitamin D. It is very hard to get enough vitamin D from food sources alone. Vitamin D helps the body absorb calcium. You need calcium for the normal development and maintenance of healthy teeth and bones. It also helps maintain proper blood levels of calcium and phosphorus."
 })
 Vitamin.create ({
     name: "Vitamin E",
-    whatsitdo: "E stands for 'everybody needs to buy their vitamins from us.'"
+    whatsitdo: "Vitamin E is an antioxidant also known as tocopherol. It helps the body form red blood cells and use vitamin K."
 })
 Vitamin.create ({
     name: "Folate",
-    whatsitdo: "Makes your body so flexible, you can be used as a folder to keep papers in."
+    whatsitdo: "Folate helps to form DNA and RNA and is involved in protein metabolism. It plays a key role in breaking down homocysteine, an amino acid that can exert harmful effects in the body if it is present in high amounts."
 })
 Vitamin.create ({
     name: "Vitamin K",
-    whatsitdo: "Needed for proper blood clotting"
+    whatsitdo: "Vitamin K is needed because without it, blood would not stick together (coagulate). Some studies suggest that it is important for bone health."
 })
 Vitamin.create ({
     name: "Magnesium",
-    whatsitdo: "Calms you down and makes you mellow, man."
+    whatsitdo: "Magnesium plays many crucial roles in the body, such as supporting muscle and nerve function and energy production."
 })
 Vitamin.create ({
     name: "Potassium",
-    whatsitdo: "Makes you feel like a banana!"
+    whatsitdo: "Potassium is found naturally in many foods and as a supplement. Its main role in the body is to help maintain normal levels of fluid inside our cells. Sodium, its counterpart, maintains normal fluid levels outside of cells. Potassium also helps muscles to contract and supports normal blood pressure."
 })
 Vitamin.create ({
     name: "Sodium",
-    whatsitdo: "Salty! Eww!"
+    whatsitdo: "It flavors food and is used as a binder and stabilizer. It is also a food preservative, as bacteria can't thrive in the presence of a high amount of salt. The human body requires a small amount of sodium to conduct nerve impulses, contract and relax muscles, and maintain the proper balance of water and minerals."
 })
 
 
@@ -82,7 +82,7 @@ Item.create ({
 	pillamount:250,
 	price:5.99,
 	pilltype:"Softgels",
-	blurb:"This 'a' is 'a' new start for your body. Take it every day and you'll be feeling like a million bucks. Your bank account will still be feeling as broke as ever, mind you, but YOU'LL feel like a million bucks, which is something.",
+	blurb: "Vitamin A from the Spring Valley corporation.",
 	picurl:"https://i.imgur.com/yWdDESq.jpg",
 	featured: true,
 	stock: 50
@@ -95,7 +95,7 @@ Item.create ({
 	dose:"1000 mcg",
 	pillamount:75,
 	pilltype:"Tablets",
-	blurb:"Do you want vitamin B? Do you hate the numbers 1, 2, 3 and 6, but love their least common multiple? Then this B12 is for you!",
+	blurb: "B12 tablets to help your energy metabolism.",
 	price:5.99,
 	picurl:"https://imgur.com/XMYEPFw.jpg",
 	featured: true,
@@ -109,7 +109,7 @@ Item.create ({
 	dose:"1000 mcg",
 	pillamount:60,
 	pilltype:"Tablets",
-	blurb:"Not the 'b's! Not the 'bbbbbbbbbbbbbbbbb's! Ohhhh noooo! The Tablets are in my eyes!",
+	blurb: "All of the B vitamins together.",
 	price:5.99,
 	picurl:"https://imgur.com/9LEhCPj.jpg",
 	featured: true,
@@ -123,7 +123,7 @@ Item.create ({
 	dose:"1000 mg",
 	pillamount:30,
 	pilltype:"Packets of Powder",
-	blurb:"This contains as much vitamin C as 10 oranges. You COULD eat 10 oranges instead, but that's about 1,000 calories.If you like some variety in your diet, might I suggest just drinking the Emergen-C and having maybe AN orange, or maybe two, so you can have some meat and other kinds of food, as well?",
+	blurb: "A delicious way to get immune-building vitamin c.",
 	price:6.99,
 	picurl:"https://imgur.com/Y3ZgQnl.jpg",
 	featured: false,
@@ -137,7 +137,7 @@ Item.create ({
 	dose:"250 mg",
 	pillamount:150,
 	pilltype:"Gummies",
-	blurb:"You like vitamins? You like candy? Then this is your bag, baby! Bet'cha can't eat just one, but you'll have to use all your willpower to keep from eating the whole bottle at once, or you'll be sleeping on the toilet tonight!",
+	blurb: "Vitamin C in pill form.",
 	price:7.99,
 	picurl:"https://imgur.com/ZseNjkT.jpg",
 	featured: true,
@@ -151,7 +151,7 @@ Item.create ({
 	dose:"? Mg",
 	pillamount:300,
 	pilltype:"Tablets",
-	blurb:"This one has three kinds of vitamins, because more is better!",
+	blurb: "Magnesium to help you manage your stress level.",
 	price:8.99,
 	picurl:"https://imgur.com/zpAHSgY.jpg",
 	featured: false,
@@ -165,7 +165,7 @@ Item.create ({
 	dose:"100mg/500mg",
 	pillamount:180,
 	pilltype:"Tablets",
-	blurb:"This will calm you down and make your bones stronger. If you like to fight, definitely get this, because strong bones make your fist stronger, and being calm makes it so your enemy can never throw you off your game.",
+	blurb: "Magnesium to help you manage your stress level.",
 	price:9.99,
 	picurl:"https://imgur.com/mCjwwGR.jpg",
 	featured: false,
@@ -179,7 +179,7 @@ Item.create ({
 	dose:"1 Cup",
 	pillamount:12,
 	pilltype:"Cups",
-	blurb:"You want a calcium suppliment? Drink more milk!",
+	blurb:"Contains calcium.",
 	price:10.99,
 	picurl:"https://imgur.com/zmsmTbI.jpg",
 	featured: false,
@@ -193,7 +193,7 @@ Item.create ({
 	dose:"500 mg",
 	pillamount:300,
 	pilltype:"Tablets",
-	blurb:"Want calcium? Lactose intolerant? Enjoy!",
+	blurb:"Calcium in tablet form.",
 	price:11.99,
 	picurl:"https://imgur.com/tQsHGZV.jpg",
 	featured: false,
@@ -207,7 +207,7 @@ Item.create ({
 	dose:"125 mcg",
 	pillamount:50,
 	pilltype:"Tablets",
-	blurb:"Did you buy calcium? Better buy this too, or you won't be able to absorb it and your purchase will be in vain. Actually, we don't care if you give us money and don't get anything for it, but we do care if you buy two things instead of one, because that's two times the MONEY! Double our cashflow! Double our overly-e	pensive fun! Double our MOOLAH!!!!!",
+	blurb: "Vitamin D from Vitamin Code.",
 	price:12.99,
 	picurl:"https://imgur.com/iORDlik.jpg",
 	featured: false,
@@ -221,7 +221,7 @@ Item.create ({
 	dose:"400 iu",
 	pillamount:300,
 	pilltype:"Softgels",
-	blurb:"Don't you just hate it when the insides of your cells come out and all start forming a big mess and you melt because you no longer have proper cells to keep you in the shape of a human? It used to happen to me all the time, until I got vitamin e to strengthen my cell walls, and the ladies love me now that I look like a human and not an amorphous blob.",
+	blurb: "Helps the body form red blood cells.",
 	price:13.99,
 	picurl:"https://imgur.com/VeDN7n8.jpg",
 	featured: false,
@@ -235,7 +235,7 @@ Item.create ({
 	dose:"666mg",
 	pillamount:250,
 	pilltype:"Tablets",
-	blurb:"All 2020, your pastor told you constantly that the covid vaccine was the mark of the beast. Well, he was wrong. The vaccine isn't the mark of the beast, this folate is! The 666 mg it contains will power you up to be the best soldier of satan you can be.",
+	blurb: "Folate tablets for those who need them.",
 	price:14.99,
 	picurl:"https://imgur.com/RFEG6XQ.jpg",
 	featured: false,
@@ -249,7 +249,7 @@ Item.create ({
 	dose:"800 mcg",
 	pillamount:30,
 	pilltype:"Capsule",
-	blurb:"This folate is not the evil variety. You should probably buy this instead.",
+	blurb: "Folate capsule for those who need them.",
 	price:15.99,
 	picurl:"https://imgur.com/jwJHlnj.jpg",
 	featured: false,
@@ -263,7 +263,7 @@ Item.create ({
 	dose:"100 mcg",
 	pillamount:30,
 	pilltype:"Softgels",
-	blurb:"If anyone tried to 'k'ill you, you'll wish you took more vitamin k, so your blood will 'k'lot better, and make those gumshot wounds a whole lot less fatal.",
+	blurb: "Helps blood stick together.",
 	price:16.99,
 	picurl:"https://imgur.com/sTqCWL0.jpg",
 	featured: false,
@@ -277,7 +277,7 @@ Item.create ({
 	dose:"250 mg",
 	pillamount:100,
 	pilltype:"Tablets",
-	blurb:"Are you an uptight square? Would you rather be more mellow? Then take some CBD! Although, magnesium ain't half bad for your stress and an	iety, either.",
+	blurb: "Magnesium to help you manage stress levels.",
 	price:17.99,
 	picurl:"https://imgur.com/xDhqyCG.jpg",
 	stock: 50,
@@ -291,7 +291,7 @@ Item.create ({
 	dose:"? mg",
 	pillamount:100,
 	pilltype:"Tablets",
-	blurb:"Here's the pill for all you banana haters! Buy a bottle and enjoy your banana-free e	istence. Does that make you weird? Sure, but that just leaves more bananas for the rest of us!",
+	blurb: "Posassium, Nature Made.",
 	price:18.99,
 	picurl:"https://imgur.com/ZpJS0G7.jpg",
 	stock: 50,
@@ -305,7 +305,7 @@ Item.create ({
 	dose:"1 gr",
 	pillamount:100,
 	pilltype:"Tablets",
-	blurb:"Sodium chloride contains tons of sodium and lots of cholrine! Take a few of these, and you'll be retining as much water as a swimming pool, and the water you're retaining will be just as cholrinated as swimming pool water, only with less urine.",
+	blurb: "Sodium tablets for those prescribed as such.",
 	price:19.99,
 	picurl:"https://imgur.com/LBvg13M.jpg",
 	featured: false,
@@ -319,7 +319,7 @@ Item.create ({
 	dose:"50lb",
 	pillamount:1,
 	pilltype:"Bag",
-	blurb:"Why pay extra for high falootin medical grade sodium when you can just oversalt the hell out of your food and get all the same benefits. This bag contains enough salt that you can cook one meal with enough salt that Gordon Ramsay will make fun of you for the rest of your life, then after you die, he'll find you on the other side and consinue micking you for all eternity.",
+	blurb: "Contains lots of sodium.",
 	price:20.99,
 	picurl:"https://imgur.com/ulRy1T5.jpg",
 	featured: false,
@@ -358,8 +358,8 @@ User.create({
 
 Review.create({
 	username: "TheBunnyWhoSqueaks",
-	title: "Guinea Pigs Love It!",
-	reviewtext: "Like humans, my body doesn't create vitamin c. My daddy gives me these pills ground up in my Timmy, and they make me feel big and strong!",
+	title: "Good Value for the Money.",
+	reviewtext: "I went to CVS, and the vitamins are cheaper on here. Just buy here and save some money.",
 	stars: 5,
 	user_id: 1,
 	item_id: 5
@@ -367,8 +367,8 @@ Review.create({
 
 Review.create({
 	username: "HatefulNotShy",
-	title: "Can't Stop My Husband from Eating Them!",
-	reviewtext: "I like the way this tastes, but so does my super fat husband, who works at home and drinks the whole box in the time it takes me to drink one pack.",
+	title: "Delicious",
+	reviewtext: "I never used to be able to remember to take my vitamin C pills, but this are so delicious, I can't stop myself from taking it!",
 	stars: 3,
 	user_id: 2,
 	item_id: 4
@@ -376,8 +376,8 @@ Review.create({
 
 Review.create({
 	username: "HatefulNotShy",
-	title: "Stress Reduction",
-	reviewtext: "I take two of these every day to reduce my stress. They work great!!",
+	title: "Really Cuts Stress",
+	reviewtext: "I work a very stressful job and used to come home every day angry, but ever since taking these, I feel a lot more relaxed.",
 	stars: 5,
 	user_id: 2,
 	item_id: 15
@@ -385,26 +385,39 @@ Review.create({
 
 Review.create({
 	username: "OldAndSpunky",
-	title: "Help Me...",
-	reviewtext: "My daughter keeps giving me these in an attempt to kill me as part of some Game of Thrones-esque backstab fest over inheritence or something. Should've stayed with Janis.",
-	stars: 1,
+	title: "Very Useful",
+	reviewtext: "My doctor recommended I take sodium suppliments, so I chose these. They've never steered me wrong.",
+	stars: 3,
 	user_id: 3,
 	item_id: 17
 })
 
 Review.create({
 	username: "OldAndSpunky",
-	title: "These Things Scare Me...",
-	reviewtext: "My daughter feeds me these. I think that 666 in the mg is some kind of coded messge about how she really feels about me.",
-	stars: 1,
+	title: "High Quality Milk",
+	reviewtext: "I used to buy my milk at the supermarket, but they never have this brand. After drinking Clover Organic Farms Milk, I will never drink any other kind.",
+	stars: 5,
 	user_id: 3,
-	item_id: 12
+	item_id: 8
 })
 
 Itemvitamin.create({
     item_id: 1,
     vitamin_id: 1
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
