@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
   def getCart
+    if session[:cart]
        render json: session[:cart]
+    else
+      render json: {[]}
+    end
   end
 
   def updateCart
