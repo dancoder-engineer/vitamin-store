@@ -122,7 +122,7 @@ Item.create ({
 	stock: 50
 })
 
-Item.create ({
+emergenc = Item.create ({
 	name:"Emergen-C Orange Flavor",
 	productname:"Orange Flavor",
 	brand:"Emergen-C",
@@ -150,7 +150,7 @@ Item.create ({
 	stock: 50
 })
 
-Item.create ({
+magnesium = Item.create ({
 	name:"Solgar Calcium Magnesium D",
 	productname:"Calcium Magnesium D",
 	brand:"Solgar",
@@ -178,7 +178,7 @@ Item.create ({
 	stock: 50
 })
 
-Item.create ({
+milk = Item.create ({
 	name:"Clover Organic Farms Milk",
 	productname:"Milk",
 	brand:"Clover Organic Farms",
@@ -262,7 +262,7 @@ Item.create ({
 	stock: 50
 })
 
-Item.create ({
+vitamink = Item.create ({
 	name:"Nature Made Vitamin K",
 	productname:"Vitamin K",
 	brand:"Nature Made",
@@ -304,7 +304,7 @@ Item.create ({
 	featured: false
 })
 
-Item.create ({
+sodium = Item.create ({
 	name:"CMC Research Division Sodium",
 	productname:"Sodium",
 	brand:"CMC Research Division",
@@ -334,7 +334,8 @@ Item.create ({
 
 
 
-User.create({
+
+huihui = User.create({
 	firstname: "Huihui",
 	lastname: "Zhu",
     username: "TheBunnyWhoSqueaks",
@@ -342,7 +343,7 @@ User.create({
     kind:"Customer"
 })
 
-User.create({
+hao = User.create({
 	firstname: "Hao",
 	lastname: "Zhang",
     username: "HatefulNotShy",
@@ -350,7 +351,7 @@ User.create({
     kind:"Customer"
 })
 
-User.create({
+vicky = User.create({
 	firstname: "Victoria",
 	lastname: "Marziotto",
     username: "OldAndSpunky",
@@ -363,48 +364,48 @@ User.create({
 
 
 Review.create({
-	username: "TheBunnyWhoSqueaks",
+	username: huihui.username,
 	title: "Good Value for the Money.",
 	reviewtext: "I went to CVS, and the vitamins are cheaper on here. Just buy here and save some money.",
 	stars: 5,
-	user_id: 1,
-	item_id: 5
+	user_id: huihui.id,
+	item_id: vitamink.id
 })
 
 Review.create({
-	username: "HatefulNotShy",
+	username: hao.username,
 	title: "Delicious",
 	reviewtext: "I never used to be able to remember to take my vitamin C pills, but this are so delicious, I can't stop myself from taking it!",
 	stars: 3,
-	user_id: 2,
-	item_id: 4
+	user_id: hao.id,
+	item_id: emergenc.id
 })
 
 Review.create({
-	username: "HatefulNotShy",
+	username: hao.username,
 	title: "Really Cuts Stress",
 	reviewtext: "I work a very stressful job and used to come home every day angry, but ever since taking these, I feel a lot more relaxed.",
 	stars: 5,
-	user_id: 2,
-	item_id: 15
+	user_id: hao.id,
+	item_id: magnesium.id
 })
 
 Review.create({
-	username: "OldAndSpunky",
+	username: vicky.username,
 	title: "Very Useful",
 	reviewtext: "My doctor recommended I take sodium suppliments, so I chose these. They've never steered me wrong.",
 	stars: 3,
-	user_id: 3,
-	item_id: 17
+	user_id: vicky,id,
+	item_id: sodium.id
 })
 
 Review.create({
-	username: "OldAndSpunky",
+	username: vicky.username,
 	title: "High Quality Milk",
 	reviewtext: "I used to buy my milk at the supermarket, but they never have this brand. After drinking Clover Organic Farms Milk, I will never drink any other kind.",
 	stars: 5,
-	user_id: 3,
-	item_id: 8
+	user_id: vicky,id,
+	item_id: milk.id
 })
 
 Itemvitamin.create({
