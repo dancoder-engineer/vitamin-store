@@ -7,6 +7,12 @@
 #   Character.create({name: "Luke", movie: movies.first})
 
 
+User.destroy_all
+Review.destroy_all
+Item.destroy_all
+Vitamin.destroy_all
+Itemvitamin.destroy_all
+
 Vitamin.create ({
     name: "Vitamin A",
     whatsitdo:"Helps form and maintain healthy teeth, bones, soft tissue, mucous membranes, and skin."
