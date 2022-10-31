@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 import './LogPages.css'
 
 function LogOut() {
-        fetch("/logout")
+        fetch("/logoutback")
         .then(res => res.json())
 //        .then(data => youGetMe())
 

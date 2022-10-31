@@ -32,7 +32,7 @@ function NewUser() {
 
 
 function submit() {
-        let fullurl = "/newuser/"
+        let fullurl = "/newuserback/"
         fetch(fullurl, {
             headers: {
                 'Accept': 'application/json',

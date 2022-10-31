@@ -19,11 +19,11 @@ Rails.application.routes.draw do
   get '/reviewsbyuser/:id', to: 'reviews#byuser'
   get '/featureditems', to: 'items#featured'
   get '/searchitems/:term', to: 'items#searchitems'
-  post '/login/', to: 'sessions#login'
-  post '/newuser', to: 'sessions#newUser'
+  post '/loginback/', to: 'sessions#login'
+  post '/newuserback/', to: 'sessions#newUser'
   get '/getme', to: 'sessions#getme'
   get '/extra', to: 'sessions#extra'
-  get '/logout', to: 'sessions#logout'
+  get '/logoutback/', to: 'sessions#logout'
   get '/reviewsbyitem/:id', to: 'reviews#byitem'
   get '/createcart/', to: 'sessions#createCart'
   post '/updatecart/', to: 'sessions#updateCart'
@@ -31,4 +31,6 @@ Rails.application.routes.draw do
   get '/emptycart/', to: 'sessions#emptyCart'
   # Defines the root path route ("/")
   # root "articles#index"
+
+  get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.4"
-gem "pg", "~> 1.1"
+  gem "pg", "~> 1.1"
 
 gem 'active_model_serializers'
 

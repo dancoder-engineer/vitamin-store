@@ -33,7 +33,7 @@ root.render(
         <Route path='/' element={<App url={url} />} />
         <Route path='/item/:id' element={<ItemPage url={url} />} />
         <Route path='/test/' element={<Test />} />
-        <Route path='/logout/' element={<LogOut />} />
+        <Route path='/logout/' element={<LogOut />} /> 
         <Route path='/login/' element={<LogIn />} />
         <Route path='/newuser/' element={ <NewUser /> } />
         <Route path='/cart/' element= { <Cart /> } />
@@ -48,3 +48,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+//login, logout, newuser
