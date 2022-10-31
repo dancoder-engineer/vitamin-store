@@ -52,3 +52,21 @@
     text-align: center;
     margin: auto
 }
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+    .buttn{
+        font-size: small;
+    }
+
+    .itemPic{
+        height:100px;
+        float:left;
+        margin-right: 5px;
+    
+    }
+
+}
