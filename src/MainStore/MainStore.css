@@ -109,3 +109,60 @@
 .headerDiv{
     background-color: lightblue;
 }
+
+
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+.itemStoreMain{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 95%;
+    margin: auto
+}
+
+.itemName{
+    grid-template-rows: 1;
+    grid-row-end: span 1;
+    width: 99%;
+    text-align: center;
+}
+
+.pictureHolder{
+    grid-template-rows: 2;
+    grid-row-end: span 1;
+    padding: 20px;
+    width: 90%
+}
+
+    .itemPicture{
+        max-height:300px;
+        width:75%;
+        display: block;
+        margin: auto;
+    }
+
+
+.dataHolder{
+    grid-template-rows: 3;
+    grid-row-end: span 1;
+    grid-template-rows: 2;
+    width: 90%
+}
+
+.reviewsHolder{
+    grid-template-rows: 4;
+    grid-row-end: span 1;
+    grid-row-end: span 1;
+    width: 90%
+}
+
+
+
+
+
+}
