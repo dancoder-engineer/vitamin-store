@@ -12,8 +12,7 @@ function Header({searchFunc, search, user}) {
  let newUserPic =  <img src="https://imgur.com/PwulKQd.png" title='Create New User' alt="Create New User" className="headerImage"/>
  let cartPic =  <img src="https://imgur.com/DSmAqNY.png" title='Cart' alt="Cart" className="headerImage"/>
  let logOutPic =  <img src="https://imgur.com/LslMJRx.png" title='Log Out' alt="Log Out" className="headerImage"/>
- let deletePic =  <img src="https://imgur.com/dfDAEXo.png" title='Delete my Account' alt="Delete my Account" className="headerImage"/>
-
+ 
 
 
  
