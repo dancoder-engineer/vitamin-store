@@ -7,7 +7,7 @@ function Header({searchFunc, search, user}) {
 
   // console.log(user)
 
- let logo =  <img src="https://imgur.com/270UZZw" title='Complaining Stone Medicinals' alt="Complaining Stone Medicinals" className="logo"/>
+ let logo =  <img src="https://imgur.com/270UZZw.png" title='Complaining Stone Medicinals' alt="Naturally Healthy Vitamins" className="logo"/>
  let loginPic =  <img src="https://imgur.com/KEAhj4f.png" title='Log In' alt="Log In" className="headerImage"/>
  let newUserPic =  <img src="https://imgur.com/PwulKQd.png" title='Create New User' alt="Create New User" className="headerImage"/>
  let cartPic =  <img src="https://imgur.com/DSmAqNY.png" title='Cart' alt="Cart" className="headerImage"/>
