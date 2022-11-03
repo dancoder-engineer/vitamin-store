@@ -190,7 +190,7 @@ function changeReview(e){
 }
 
 
-function sendReview() {
+function sendReview() { console.log(user)
 
     let submitIt={
         ...reviewData,
