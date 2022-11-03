@@ -36,9 +36,19 @@ function youGetMe() {
   fetch("/getme/")
   .then(res => res.json())
   .then(data => {//  console.log(data)
-    if(data) { setShowReviewBox(true) }
+    if(data) { checkIfReviewed(data.id) }
     setUser(data)
   })
+}
+
+function checkIfReviewed(userid) {
+    fetch("/reviewsbyuseritem/" + userid + "/" + params.id)
+    .then(res => res.json())
+    .then(data => {
+        if (!data[0]) { setShowReviewBox(true) }
+
+    })
+    
 }
 
 function createCartSlot() {
