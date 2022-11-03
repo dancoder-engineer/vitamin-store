@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get '/byletter/', to: 'items#byLetter'
   get '/reviewsbyuser/:id', to: 'reviews#byuser'
+  get '/reviewsbyuseritem/:user/:item', to: 'reviews#byuseritem'
   get '/featureditems', to: 'items#featured'
   get '/searchitems/:term', to: 'items#searchitems'
   post '/loginback/', to: 'sessions#login'

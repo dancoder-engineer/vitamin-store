@@ -41,14 +41,16 @@ class ReviewsController < ApplicationController
             end
         end
 
+        def byuseritem
+            reviews = Review.where(user_id: params[:user], item_id: params[:item])
+            render json: reviews, status: 200
+        end
 
         def byuser
             reviews = Review.where(user_id: params[:id])
             render json: reviews, status: 200
         end
 
-
-        
         def byitem
             reviews = Review.where(item_id: params[:id])
             render json: reviews, status: 200
