@@ -59,6 +59,6 @@ class ReviewsController < ApplicationController
     private
 
     def allowed
-        params.permit(:title, :reviewtext, :stars, :user_id, :item_id)
+        params.permit(:title, :reviewtext, :stars, :user_id, :item_id, :username)
     end
 end
