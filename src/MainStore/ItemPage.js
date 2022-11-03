@@ -195,7 +195,8 @@ function sendReview() {
     let submitIt={
         ...reviewData,
         user_id: user.id,
-        item_id: params.id
+        item_id: params.id,
+        username: user.username
     }
 
    // console.log(reviewData)
