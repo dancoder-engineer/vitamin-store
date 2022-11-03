@@ -35,7 +35,7 @@ function youGetMe() {
 
   fetch("/getme/")
   .then(res => res.json())
-  .then(data => {  console.log(data)
+  .then(data => {  //console.log(data)
     if(data) { 
         checkIfReviewed(data.id)
         setUser(data)
@@ -46,9 +46,8 @@ function youGetMe() {
 function checkIfReviewed(userid) {
     fetch("/reviewsbyuseritem/" + userid + "/" + params.id)
     .then(res => res.json())
-    .then(data => { console.log(data)
+    .then(data => { 
         if (!data[0]) { setShowReviewBox(true) }
-
     })
     
 }
@@ -123,7 +122,7 @@ function getitemData() {
   //  console.log(data)
     setItemData(data)
 
-    setReviews(data.reviews.map((i) => { 
+    setReviews(data.reviews.map((i) => { console.log(i)
         if (user) {
             if (user.id === i.user_id) { setShowReviewBox(false)}
         }
@@ -199,7 +198,7 @@ function sendReview() {
         item_id: params.id
     }
 
-    console.log(reviewData)
+   // console.log(reviewData)
     
 
     let fullurl = "/reviews/"
