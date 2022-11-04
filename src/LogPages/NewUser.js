@@ -62,7 +62,7 @@ function submit() {
             User Name:<br /><input type="text" name="username" onChange={handleChange}/><br />
             Password:<br /><input type="password" name="password" onChange={handleChange}/><br />
             Retype Password:<br /><input type="password" name="password_confirmation" onChange={handleChange}/><br /><br />
-            <button onClick={submit}>Log In</button>
+            <button onClick={submit}>Create New User</button>
             <br /> <br />
             <p>{faild}</p>
         </div>
