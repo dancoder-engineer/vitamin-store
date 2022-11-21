@@ -149,7 +149,7 @@ function parseDate(dat) {
     let year = dat.slice(0,4)
     let month = dat.slice(5,7)
     let day = dat.slice(8,10)
-    return day+"/"+month+"/"+year
+    return month+"/"+day+"/"+year
 }
 
 function makeStars(amount) {
